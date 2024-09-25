@@ -1,0 +1,16 @@
+.ParibuLogo {
+  width: 130px;
+  height: auto;
+}
+
+@media (min-width: 650px) {
+  .ParibuLogo {
+      width: 155px;
+  }
+}
+
+@media (min-width: 992px) {
+  .ParibuLogo {
+      width: 185px;
+  }
+}

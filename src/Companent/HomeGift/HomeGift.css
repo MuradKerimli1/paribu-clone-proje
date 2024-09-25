@@ -1,0 +1,26 @@
+.homeGift {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  
+  }
+  
+  .homeGift .swiper-button-next,
+  .homeGift .swiper-button-prev {
+    color: #fff !important;
+    z-index: 3;
+    background: rgb(255 255 255 / 23%);
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .homeGift .swiper-button-next:after,
+  .homeGift .swiper-button-prev:after {
+    font-size: 15px !important;
+    font-weight: 600;
+  }
+  

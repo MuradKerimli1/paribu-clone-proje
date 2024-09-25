@@ -1,0 +1,14 @@
+.otherPopularTitle {
+    font: 500 22px 'Proxima';
+}
+.otherPopularList {
+  display: flex;
+  flex-direction: column;
+}
+
+.otherPopularList li {
+  font: 500 15px "Proxima";
+  opacity: 0.9;
+  margin-top: 5px;
+  cursor: pointer;
+}

@@ -1,0 +1,14 @@
+.movieSectionBg{
+    width: 100%;
+    height: 100%;
+    padding: 15px 0;
+    background-color: #131313;
+    color: white;
+}
+.FIlmReklam{
+    padding: 40px 0;
+    width: 100%;
+    display: flex;
+    justify-content: start !important;
+    margin: 0 !important;
+}

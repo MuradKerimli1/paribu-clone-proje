@@ -1,0 +1,162 @@
+.FooterBg {
+  background-color: #121212;
+  width: 100%;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased gap for better spacing */
+  padding: 25px 10px; /* Slightly increased padding */
+}
+
+.mainList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Increased gap for better spacing */
+  width: 100%;
+}
+
+.mainFtHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer; /* Indicate clickable */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.mainFtHeader p {
+  font: 600 17px "Proxima", sans-serif;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 6px;
+}
+
+.mainFtHeader span {
+  font: 600 14px "Proxima", sans-serif;
+  color: #fff;
+}
+
+.mainFtContext {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  opacity: 0;
+  overflow: hidden; /* Hide overflow content */
+  height: 0; /* Start with zero height */
+  transition: all 0.4s;
+}
+
+.mainFtContext.active {
+  opacity: 1;
+  height: auto; /* Allow height to expand */
+}
+
+.mainFtContext span {
+  color: #fff;
+  opacity: 0.8;
+  font: 600 14px "Proxima", sans-serif;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.mainFtContext img {
+  width: 130px;
+  margin-top: 5px; /* Added margin for spacing */
+}
+
+.mainFtContext p {
+  color: white;
+  font: 600 15px "Proxima", sans-serif;
+  margin-top: 7px;
+}
+
+.footerSecond {
+  margin-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.secondList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0;
+}
+
+.secondList li {
+  color: #fff;
+  opacity: 0.8;
+  font: 600 15px "Proxima", sans-serif;
+}
+
+.secondList li:hover {
+  opacity: 1; /* Hover effect for better interactivity */
+}
+
+.footerMars {
+  width: 130px;
+}
+
+@media (min-width: 992px) {
+  .mainList {
+    display: flex;
+    flex-direction: initial;
+    justify-content: space-between;
+  }
+
+  .mainFtHeader {
+    display: flex;
+    align-items: center;
+    justify-content: initial;
+  }
+
+  .mainFtHeader p {
+    font: 600 18px "Proxima", sans-serif;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 6px;
+  }
+
+  .mainFtHeader span {
+    font: 600 15px "Proxima", sans-serif;
+    color: #fff;
+    display: none;
+    cursor: pointer;
+    cursor: pointer;
+  }
+
+  .mainFtContext {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    opacity: 1;
+    overflow: hidden; /* Hide overflow content */
+    height: auto;
+    transition: all 0.4s;
+  }
+
+  .mainFtContext span {
+    color: #fff;
+    opacity: 0.8;
+    font: 600 15px "Proxima", sans-serif;
+    margin-top: 5px;
+    cursor: pointer;
+  
+  }
+
+  .mainFtContext p {
+    font: 600 16px "Proxima", sans-serif;
+    cursor: pointer;
+  }
+
+  .secondList {
+    display: flex;
+    flex-direction: initial;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 0;
+  }
+}

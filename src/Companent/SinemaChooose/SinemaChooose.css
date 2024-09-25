@@ -1,0 +1,88 @@
+.filterChoose {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  
+}
+
+.filterChooseHead {
+  background-color: #3d4245;
+  color: #b1b3b5;
+  font: 600 14px "Proxima";
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.filterChooseContext {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #656b6f;
+  overflow-y: auto;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  margin-top: 5px;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.filterChooseContext.active {
+  max-height: 270px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.filterChooseContext::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: #3d3d3d;
+}
+
+.filterChooseContext::-webkit-scrollbar-thumb {
+  background-color: #5555;
+}
+
+.filterChooseContext input {
+  width: 100%;
+  background-color: #3d4245;
+  padding: 7px;
+  border: 0;
+  outline: none;
+  color: white;
+}
+
+.filterChooseList {
+  display: flex;
+  flex-direction: column;
+}
+
+.filterChooseList li {
+  color: white;
+  font: 500 13px "Proxima";
+  text-transform: capitalize;
+  padding: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@media (max-width: 820px) {
+  .filterChoose {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+  }
+  .filterChooseContext.active {
+    max-height: 300px;
+  }
+}

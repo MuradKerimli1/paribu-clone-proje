@@ -1,0 +1,96 @@
+.companyDetalBg {
+    background: #161616;
+    width: 100%;
+    height: auto;
+  }
+  
+  .companyDetal {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 0;
+  }
+  
+  .companyDetalImage img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+  
+  .companyDetalText {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .companyDetalDate {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  
+  .companyDetalDate p {
+    color: #c8c8c8;
+    font: 600 15px "Proxima";
+  }
+  
+  .companyDetalDate span {
+    color: #a9b933;
+    font: 600 17px "Proxima";
+  }
+  
+  .companyDetalTitle p {
+    font: 600 25px "Proxima";
+    color: white;
+    text-align: start;
+    margin: 8px 0;
+  }
+  
+  .companyDetalKosullari span {
+    color: white;
+    font: 600 15px "Proxima";
+    margin: 7px 0;
+  }
+  
+  .kosulItem {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #c8c8c8;
+    font: 600 14px "Proxima";
+    margin-bottom: 5px;
+  }
+  
+  .companyDetalSwiperTitle p {
+    color: white;
+    font: 600 20px 'Proxima';
+    margin: 10px 0;
+  }
+  
+  .companyDetalSwiper {
+    width: 100%;
+    padding: 20px 0;
+  }
+  
+
+  .companyDetalSwiper .swiper-button-next,
+  .companyDetalSwiper .swiper-button-prev {
+    color: black !important;
+    z-index: 3;
+    background: rgb(255 255 255 / 23%);
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .companyDetalSwiper .swiper-button-next:after,
+  .companyDetalSwiper .swiper-button-prev:after {
+    font-size: 18px !important;
+    font-weight: 600;
+  }
+  

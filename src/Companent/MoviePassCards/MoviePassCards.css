@@ -1,0 +1,33 @@
+.passCardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 0;
+}
+.cardstextMovie {
+  font-weight: 400;
+  font-size: 17px;
+  color: #ababab;
+  text-align: center;
+  width: 85%;
+  margin: 0 auto;
+}
+.moviePassCards {
+  display: grid;
+  gap: 25px;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 30px 0;
+}
+
+@media (min-width: 580px) {
+  .moviePassCards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7px;
+  }
+}
+@media (min-width: 1070px) {
+    .moviePassCards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }

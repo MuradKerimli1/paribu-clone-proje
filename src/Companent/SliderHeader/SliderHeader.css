@@ -1,0 +1,18 @@
+.vizyonSlider_header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .vizyonSlider_header p {
+    font: 600 22px "Proxima";
+    color: white;
+  }
+  
+  .vizyonSlider_header span {
+    color: white;
+    font: 600 17px "Proxima";
+    text-decoration: underline;
+    cursor:pointer;
+  }

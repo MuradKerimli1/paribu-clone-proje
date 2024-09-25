@@ -1,0 +1,47 @@
+.vizyonSLider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 10px;
+    overflow: hidden;
+ 
+  }
+  
+  .vizyonSlider_content {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .vizyonSlider_content .swiper-button-next,
+  .vizyonSlider_content .swiper-button-prev {
+    color: #fff !important;
+    z-index: 3;
+    background: rgb(255 255 255 / 23%);
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .vizyonSlider_content .swiper-button-next:after,
+  .vizyonSlider_content .swiper-button-prev:after {
+    font-size: 13px !important;
+    font-weight: 600;
+  }
+  
+  @media (min-width: 992px) {
+    .vizyonSlider_header p {
+      font: 600 29px "Proxima";
+    }
+    .vizyonSlider_header span {
+      font: 600 20px "Proxima";
+  }
+  }
+  

@@ -1,0 +1,126 @@
+.cgvSinemaMain {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.cgvSinemaImage {
+  display: none;
+}
+
+.cgvLogoSinema {
+  text-align: center;
+}
+
+.sub-first-paragraph {
+  text-align: center;
+  margin: 15px 0;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.sub-description p {
+  text-align: center;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  color: #1e1e1e;
+  max-width: 65%;
+  margin: 0 auto;
+}
+
+.sub-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding-top: 20px;
+}
+
+.sub-kesfet,
+.sub-uye {
+  width: 48%;
+  height: 40px;
+  font-weight: 700;
+  border-radius: 16px;
+  font-size: 15px;
+
+  cursor: pointer;
+}
+
+.sub-kesfet {
+  border: 1px solid #abb5c4;
+  background-color: transparent;
+  color: #6c757d;
+  text-transform: capitalize;
+}
+
+.sub-uye {
+  color: white;
+  background-color: #96a825;
+  border: none;
+}
+
+.cgv3x {
+  display: none;
+}
+
+@media (min-width: 720px) {
+  .sub-description p {
+    max-width: 50%;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .cgvSinemaMain {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 70px;
+  }
+
+  .cgvLogoSinema img {
+    width: 150px;
+    height: 100px;
+  }
+
+  .cgvLogoSinema {
+    text-align: initial;
+  }
+
+  .sub-first-paragraph {
+    text-align: initial;
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .sub-description p {
+    text-align: initial;
+    margin: 10px 0;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 25px;
+    max-width: 75%;
+  }
+
+  .sub-buttons {
+    width: 40%;
+  }
+
+  .cgvSinemaImage {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .cgvSinemaImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

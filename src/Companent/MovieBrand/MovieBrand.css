@@ -1,0 +1,12 @@
+.movieBrand{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}.movieBrand img{
+    width: 20px;
+    height: 20px;
+}
+.movieBrand span{
+    color: white;
+    font: 600 14px 'Proxima';
+}

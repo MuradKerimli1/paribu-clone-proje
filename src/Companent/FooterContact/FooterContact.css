@@ -1,0 +1,43 @@
+.footerContactBg {
+  width: 100%;
+  background-color: #98a726;
+}
+.footerContactMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+}
+.contact-text p {
+  font: 600 25px "Proxima";
+  color: white;
+  white-space: nowrap;
+}
+.footerContactTerms {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.footerContactTerms img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+@media (min-width: 992px) {
+  .footerContactMain {
+    all: unset;
+    display: flex;
+    gap: 150px;
+    padding: 15px 0;
+  }
+  .footerContactTerms {
+    gap: 80px;
+  }
+  .footerContactTerms img{
+    width: 37px;
+    height: 37px;
+    cursor: pointer;
+}
+}

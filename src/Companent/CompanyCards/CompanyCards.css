@@ -1,0 +1,25 @@
+.companyCards {
+    display: grid;
+    gap: 25px;
+    grid-auto-rows: 1fr; 
+    padding: 40px 0;
+  }
+  
+  @media (max-width: 565px) {
+    .companyCards {
+      grid-template-columns: 1fr; 
+    }
+  }
+  
+  @media (min-width: 565px) and (max-width: 992px) {
+    .companyCards {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .companyCards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  

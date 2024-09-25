@@ -1,0 +1,111 @@
+.homecompanyCard {
+  position: relative;
+  width: 100%;
+  height: 370px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.homeCompanyImage {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  border-radius: 25px 25px 0 0;
+}
+
+.homeCompanyImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.homeCompanyContextText {
+  width: 100%;
+  height: 55%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px; /* Adjusted gap for better spacing */
+  padding: 15px;
+  border-radius: 0 0 25px 25px; /* Rounded corners on the bottom */
+  box-sizing: border-box; /* Includes padding in height calculation */
+  overflow: hidden; /* Ensures text does not overflow */
+}
+
+.companyHeader {
+  font: 600 18px "Proxima", sans-serif;
+  letter-spacing: 0.2px; /* Fixed letter spacing */
+}
+
+.companyPlot {
+  color: #1e1e1e;
+  font: 500 17px "Proxima", sans-serif;
+  text-align: justify;
+  margin: 20px 0;
+}
+
+.homeCompanyContextFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeCompanyContextFooter button {
+  background-color: transparent;
+  padding: 10px 20px;
+  font: 600 16px "Proxima", sans-serif;
+  border-radius: 25px;
+  cursor: pointer;
+  border: 1px solid #1e1e1e; /* Added border for button */
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px; /* Smooth transition effect */
+}
+
+.homeCompanyContextFooter button:hover {
+  background-color: #f0f0f0; /* Hover effect for button */
+}
+
+.homeCompanyContextFooter p {
+  font: 600 15px "Proxima", sans-serif;
+}
+
+.homeCompanyContextFooter span {
+  color: #98a726;
+  font: 600 17px "Proxima", sans-serif;
+  margin-left: 15px;
+}
+
+@media (min-width: 992px) {
+  .homecompanyCard {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .homeCompanyImage {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 25px 25px 0 0;
+  }
+
+  .homeCompanyImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .homeCompanyContextText {
+    display: none;
+  }
+}

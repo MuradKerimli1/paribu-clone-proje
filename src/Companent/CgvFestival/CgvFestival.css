@@ -1,0 +1,46 @@
+.festivalTitle {
+  color: white;
+  font: 600 30px "Proxima";
+  text-align: center;
+}
+.festivalDate {
+  color: white;
+  font: 500 20px "Proxima";
+  margin-top: 10px;
+  text-align: center;
+  align-items: center;
+}
+.cgvFestivalSwiper {
+  padding: 35px 0 20px 0;
+}
+.cgvFestivalSwiper .swiper-button-next,
+.cgvFestivalSwiper .swiper-button-prev {
+  color: black !important;
+  z-index: 3;
+  background: rgb(255 255 255 / 23%);
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cgvFestivalSwiper .swiper-button-next:after,
+.cgvFestivalSwiper .swiper-button-prev:after {
+  font-size: 20px !important;
+  font-weight: 600;
+}
+
+@media (max-width: 550px) {
+  .festivalTitle {
+    font: 600 18px "Proxima";
+  }
+  .festivalDate {
+    color: white;
+    font: 500 15px "Proxima";
+    margin-top: 10px;
+    text-align: center;
+    align-items: center;
+  }
+}

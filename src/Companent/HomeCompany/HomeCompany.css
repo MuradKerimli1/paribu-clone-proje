@@ -1,0 +1,66 @@
+.homeCompany {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 20px;
+  }
+  
+  .homeCompanySlider {
+    position: relative;
+    overflow: hidden;
+    padding-top: 30px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .homeCompanySlider .swiper-button-next,
+  .homeCompanySlider .swiper-button-prev {
+    color: black !important;
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.23);
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .homeCompanySlider .swiper-button-next:after,
+  .homeCompanySlider .swiper-button-prev:after {
+    font-size: 20px !important;
+    font-weight: 600;
+  }
+  
+  .swiper-pagination {
+    position: absolute;
+    bottom: 0px !important;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  .swiper-pagination-bullet {
+    background-color: #ffffff !important;
+    width: 15px !important;
+    height: 15px !important;
+    opacity: 0.3 !important;
+  }
+  /* Aktif pagination bullet'ının arka plan rengini beyaz ve yüksekliğini artırın */
+  .swiper-pagination-bullet-active {
+      width: 50px !important;
+      height: 15px !important;
+      border-radius: 7.5px !important; 
+      background-color: white !important;
+      opacity: 1 !important;
+    }
+    
+  
+  @media (min-width: 992px) {
+    .swiper-pagination {
+      display: inline-block !important;
+    }
+      
+  }
+  

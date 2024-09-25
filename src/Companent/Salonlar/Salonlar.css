@@ -1,0 +1,17 @@
+.salon {
+  display: flex;
+  align-items: center;
+  flex-basis: 10%;
+  box-sizing: border-box;
+  padding: 0px 18px;
+  gap: 10px;
+  height: 76px;
+  background: #383838;
+  border-radius: 999px;
+  justify-content: center;
+  cursor: pointer;
+}
+.salon img {
+  width: 120px;
+  height: 26px;
+}

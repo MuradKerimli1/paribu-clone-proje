@@ -1,0 +1,34 @@
+.homeVizyon,
+.homeCompanye,
+.homegiftContainer,
+.cgvSinemaContainer,
+.ayricalikliSaolnlarContainer,
+.mobileReklamContainer{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #181818;
+}
+.homeConext {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+.homegiftContainer{
+  padding: 50px 0;
+}
+.cgvSinemaContainer{
+  padding: 10px 0 40px 0;
+}
+.mobileReklamContainer{
+padding: 40px 0 60px 0;
+}
+
+@media (max-width: 992px) {
+  .homeConext {
+    gap: 25px;
+  }
+}
+.homeCompany {
+    padding-top: 50px;
+}

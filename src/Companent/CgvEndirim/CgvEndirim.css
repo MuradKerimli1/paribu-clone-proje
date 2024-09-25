@@ -1,0 +1,82 @@
+.cgvEndirimContainer {
+  width: 100%;
+  padding: 30px 0;
+}
+
+.endirimTitle {
+  color: white;
+  font: 600 35px "Proxima", sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cgvEndirimSwiper {
+  position: relative;
+  width: 90%;
+  height: auto;
+  text-align: center;
+  padding: 20px;
+  margin: 40px auto;
+}
+
+.endirimSwiperCard {
+  display: flex;
+  flex-direction: column;
+  height: 260px;
+  width: 100%;
+  border-radius: 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.endirimSwiperCard:hover {
+  transform: scale(1.05);
+}
+
+.endirimImage img {
+  width: 140px !important;
+  height: 140px !important;
+  object-fit: contain;
+}
+
+.endirimSwiperCard p {
+  margin-top: 15px;
+  font: 600 14px "Proxima";
+  color: #555;
+  text-align: center;
+}
+
+.cgvEndirimSwiper .swiper-button-next,
+.cgvEndirimSwiper .swiper-button-prev {
+  color: black !important;
+  z-index: 3;
+  background: rgb(255 255 255 / 23%);
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cgvEndirimSwiper .swiper-button-next:after,
+.cgvEndirimSwiper .swiper-button-prev:after {
+  font-size: 18px !important;
+  font-weight: 600;
+}
+
+@media (max-width: 550px) {
+  .cgvEndirimSwiper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 0;
+    margin: 40px auto;
+  }
+}

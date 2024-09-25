@@ -1,0 +1,529 @@
+.cocukAileHeaderBg {
+  width: 100%;
+  background-color: #fff;
+  z-index: 10;
+}
+.cocukAileHeader {
+  display: flex;
+ 
+  align-items: center;
+  justify-content: center;
+  width: 70% !important;
+  margin: 0 auto !important;
+}
+.cocukAileList {
+  display: flex;
+  gap: 20px;
+}
+.cocukAileList li {
+  padding: 13px 0 13px 0;
+  transition: all 0.4s;
+}
+
+.cocukAileList li a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #8c8c8c;
+  white-space: nowrap;
+  font: 600 15px "Proxima";
+}
+.cocukAileList li a img {
+  height: 30px !important;
+}
+
+.cocukAileMainImage {
+  width: 100%;
+  height: 100vh;
+}
+.cocukAileMainImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cocukAileAbout {
+  position: relative;
+  width: 100%;
+}
+.cocukAileAboutContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+}
+.cocukAileAboutLeft {
+  width: 50%;
+  padding: 63px 0;
+  padding-right: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cocukAileAboutLeft p {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 50px;
+  text-align: left;
+}
+.cocukAileAboutLeft span {
+  font-size: 20px;
+  font-weight: 400;
+  color: #1e1e1e;
+  padding: 10px 0px;
+}
+.cocukAileAboutLeft strong {
+  font-size: 19px;
+  font-weight: bolder;
+}
+.balonLeft {
+  position: absolute;
+  left: -18px;
+  top: -125px;
+}
+.balonRight {
+  position: absolute;
+  right: -18px;
+  top: -105px;
+}
+.uniionLeft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.cocukAileUyeBg {
+  width: 100%;
+  background-color: #ff7148;
+}
+.cocukAileUye {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 30px 0;
+}
+.uyeLeftContext {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.uyeLeftContext span {
+  color: white;
+  font: 600 22px "Proxima";
+}
+.uyeLeftContext p {
+  color: white;
+  font: 600 27px "Proxima";
+}
+.cocukAileUyeLeft {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cocukAileUyeRight {
+  width: 55%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  gap: 5px;
+}
+.uyeAyricalik {
+  padding: 65px 0;
+  position: relative;
+}
+.uyeAyricalikTitle {
+  color: black;
+  font: 600 35px "Proxima";
+  text-align: center;
+  padding: 20px 0;
+}
+.uyeBalonLeft {
+  position: absolute;
+  left: 0%;
+  top: 2%;
+}
+.uyeBalonRight {
+  position: absolute;
+  right: 0%;
+  top: -8%;
+  z-index: 3;
+}
+.cocukAileAboutRight img{
+    width: 100%;
+}
+.uyeAyricalikItems {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 10px;
+  padding: 80px 0 40px 0;
+}
+.cgvOzelEndirimlerBg {
+  background-color: #ff7043;
+  width: 100%;
+}
+.cgOzellikFooter {
+  background-color: #121212;
+  padding: 30px 0;
+}
+.cgvOzellikReklam {
+  padding-top: 30px;
+}
+.cgvFilmFestivalBg {
+  background-color: #121212;
+}
+.cgvFilmFestival {
+  width: 100%;
+  padding: 30px 0;
+}
+
+@media (max-width: 550px) {
+  .cocukAileHeader {
+    justify-content: initial;
+    width: 97% !important;
+    overflow-x: auto;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #888 #e0e0e0; /* Thumb and track colors for Firefox */
+  }
+  
+  /* Scrollbar styling for WebKit browsers (Chrome, Safari, Edge) */
+  .cocukAileHeader::-webkit-scrollbar {
+    height: 6px; /* Adjust the height of the scrollbar */
+  }
+  
+  .cocukAileHeader::-webkit-scrollbar-track {
+    background-color: #e0e0e0; /* Background of the scrollbar track */
+  }
+  
+  .cocukAileHeader::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+  }
+  
+  .cocukAileHeader::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color when hovered */
+  }
+  
+  .cocukAileList {
+    gap: 15px;
+  }
+  .cocukAileList li a {
+    font: 600 13px "Proxima";
+  }
+  .cocukAileList li a img {
+    height: 25px !important;
+  }
+
+  .cocukAileMainImage {
+    height: 70vh;
+  }
+
+  .cocukAileAboutContent {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  .cocukAileAboutLeft {
+    width: 100%;
+    padding: 33px 0;
+    padding-right: 22px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  .cocukAileAboutLeft p {
+    font-size: 26px;
+    text-align: center;
+  }
+  .cocukAileAboutLeft span {
+    font-size: 18px;
+  }
+  .cocukAileAboutLeft strong {
+    font-size: 17px;
+  }
+  .balonLeft {
+    position: absolute;
+    left: -18px;
+    top: -125px;
+    display: none;
+  }
+  .balonRight {
+    position: absolute;
+    right: -18px;
+    top: -105px;
+    display: none;
+  }
+  .uniionLeft {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+  }
+  
+
+  .cocukAileUye {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .uyeLeftContext span {
+    font: 600 19px "Proxima";
+  }
+  .uyeLeftContext p {
+    font: 600 23px "Proxima";
+  }
+  .cocukAileUyeLeft {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .cocukAileUyeLeft img {
+    width: 135px;
+  }
+
+  .cocukAileUyeRight {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: auto;
+    gap: 30px;
+  }
+  .uyeAyricalik {
+    padding: 35px 0;
+    position: relative;
+  }
+  .uyeAyricalikTitle {
+    color: black;
+    font: 600 26px "Proxima";
+    text-align: center;
+    padding: 15px 0;
+  }
+  .uyeBalonLeft {
+    position: absolute;
+    left: 0%;
+    top: 2%;
+    display: none;
+  }
+  .uyeBalonRight {
+    position: absolute;
+    right: 0%;
+    top: -8%;
+    z-index: 3;
+    display: none;
+  }
+  .uyeAyricalikItems {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    padding: 40px 0 30px 0;
+  }
+
+  .cgOzellikFooter {
+    background-color: #121212;
+    padding: 20px 0;
+  }
+  .cgvOzellikReklam {
+    padding-top: 20px;
+  }
+  .cgvFilmFestivalBg {
+    background-color: #121212;
+  }
+  .cgvFilmFestival {
+    width: 100%;
+    padding: 20px 0;
+  }
+}
+@media((min-width:550px) and (max-width:992px)){
+    .cocukAileHeader {
+        justify-content: initial;
+        width: 97% !important;
+        overflow-x: initial;
+      }
+      .cocukAileList {
+        gap: 17px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        align-self: center;
+        text-align: center;
+      }
+      
+      .cocukAileList li a {
+        font: 600 15px "Proxima";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+      }
+      .cocukAileList li a img {
+        height: 26px !important;
+      }
+    
+      .cocukAileMainImage {
+        height: 80vh;
+      }
+    
+      .cocukAileAboutContent {
+        flex-direction: column;
+        padding: 20px 0;
+      }
+      .cocukAileAboutLeft {
+        width: 100%;
+        padding: 33px 0;
+        padding-right: 22px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+      .cocukAileAboutLeft p {
+        font-size: 26px;
+        text-align: center;
+      }
+      .cocukAileAboutLeft span {
+        font-size: 18px;
+      }
+      .cocukAileAboutLeft strong {
+        font-size: 17px;
+      }
+      .balonLeft {
+        position: absolute;
+        left: -18px;
+        top: -125px;
+        display: none;
+      }
+      .balonRight {
+        position: absolute;
+        right: -18px;
+        top: -105px;
+        display: none;
+      }
+      .uniionLeft {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: none;
+      }
+      
+    
+      .cocukAileUye {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    
+      .uyeLeftContext span {
+        font: 600 19px "Proxima";
+      }
+      .uyeLeftContext p {
+        font: 600 23px "Proxima";
+      }
+      .cocukAileUyeLeft {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .cocukAileUyeLeft img {
+        width: 155px;
+      }
+    
+      .cocukAileUyeRight {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        gap: 30px;
+      }
+      .uyeRightIMage{
+        max-width: 60%;
+      }
+      .uyeAyricalik {
+        padding: 35px 0;
+        position: relative;
+      }
+      .uyeAyricalikTitle {
+        color: black;
+        font: 600 26px "Proxima";
+        text-align: center;
+        padding: 15px 0;
+      }
+      .uyeBalonLeft {
+        position: absolute;
+        left: 0%;
+        top: 2%;
+        display: none;
+      }
+      .uyeBalonRight {
+        position: absolute;
+        right: 0%;
+        top: -8%;
+        z-index: 3;
+        display: none;
+      }
+      .uyeAyricalikItems {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+        padding: 40px 0 30px 0;
+      }
+    
+      .cgOzellikFooter {
+        background-color: #121212;
+        padding: 20px 0;
+      }
+      .cgvOzellikReklam {
+        padding-top: 20px;
+      }
+      .cgvFilmFestivalBg {
+        background-color: #121212;
+      }
+      .cgvFilmFestival {
+        width: 100%;
+        padding: 20px 0;
+      }
+}
+@media((min-width:992px) and (max-width:1200px)){
+    .cocukAileUye {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding: 30px 0;
+      }
+      .uyeLeftContext {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .uyeLeftContext span {
+        color: white;
+        font: 600 22px "Proxima";
+      }
+      .uyeLeftContext p {
+        color: white;
+        font: 600 27px "Proxima";
+      }
+      .cocukAileUyeLeft {
+        width: 45%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .cocukAileUyeLeft img{
+        width: 200px;
+      }
+      
+      .cocukAileUyeRight {
+        width: 55%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        gap: 5px;
+      }
+}

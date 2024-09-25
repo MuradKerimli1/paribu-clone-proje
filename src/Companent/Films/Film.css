@@ -1,0 +1,37 @@
+.Films {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 70px;
+  padding: 30px 0 60px 0;
+}
+@media (min-width: 480px) {
+  .Films {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 70px;
+  }
+}
+@media (min-width: 750px) {
+  .Films {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 70px;
+  }
+}
+@media (min-width: 1050px) {
+  .Films {
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 20px;
+    row-gap: 70px;
+  }
+}
+@media (min-width: 1200px) {
+  .Films {
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 20px;
+    row-gap: 70px;
+  }
+}

@@ -1,0 +1,75 @@
+.navbarList,
+.navigation-parent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.navigation-child {
+  width: 100%;
+  border-bottom: 1px solid #3f3f3f;
+  padding-bottom: 7px;
+}
+.navigation-child a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: white;
+  font: 600 19px "Proxima";
+}
+.navigation-icon {
+  font-size: 18px;
+}
+
+.navigation-image img {
+  width: 29px;
+  height: 29px;
+}
+.navbar-list-footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer-list-paragraph {
+  font: 600 17px "Proxima";
+}
+.navbar-footer-parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.navbar-footer-child {
+  font-size: 30px;
+}
+
+@media (min-width: 992px) {
+  .navbar-list-footer {
+    display: none;
+  }
+  .navigation-child {
+    width: initial;
+    border: none;
+    padding-bottom: 7px;
+  }
+  .navigation-parent{
+    flex-direction: initial;
+    gap: 40px;
+    align-items: center;
+  }
+  .navigation-child a {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: white;
+    font: 600 17px "Proxima";
+  }
+  .premium-text,
+  .navigation-icon{
+    display: none;
+  }
+  .navigation-image img {
+    width: 50px;
+    height: 5z0px;
+}
+}

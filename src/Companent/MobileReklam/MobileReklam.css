@@ -1,0 +1,223 @@
+.mobileReklamMain {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  gap: 10px;
+  background-color: #1a1a1a;
+  padding: 10px;
+  border-radius: 25px;
+}
+.mobileReklamLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-basis: 40%;
+}
+.reklamTitle p {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: white;
+  max-width: 200px;
+}
+.mobile-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.mobile-icons img {
+  max-width: 6.5rem;
+  margin-bottom: 0.1rem;
+}
+.reklamAvatar {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: -40%;
+}
+.reklamphone {
+  position: absolute;
+  right: 1%;
+  bottom: 0;
+}
+.reklamphone img {
+  height: 250px;
+}
+.reklamAvatar img {
+  width: 140px;
+}
+.reklamPhonesecond {
+  display: none;
+}
+
+@media (min-width: 470px) {
+  .reklamTitle p {
+    font-weight: 700;
+    font-size: 22px;
+
+    max-width: 200px;
+  }
+  .mobileReklamMain {
+    height: 230px;
+  }
+  .reklamphone img {
+    height: 210px;
+  }
+  .mobile-icons img {
+    max-width: 7.5rem;
+    margin-bottom: 0.1rem;
+  }
+  .reklamAvatar img {
+    width: 160px;
+  }
+}
+
+@media (min-width: 650px) {
+  .mobile-icons {
+    flex-direction: initial;
+  }
+  .reklamTitle p {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    color: white;
+    max-width: 180px;
+  }
+  .mobileReklamMain {
+    height: 220px;
+  }
+  .reklamAvatar {
+    position: absolute;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    bottom: -40%;
+  }
+  .reklamphone img {
+    height: 210px;
+  }
+  .reklamAvatar img {
+    width: 170px;
+  }
+}
+@media (min-width: 800px) {
+  .mobile-icons {
+    flex-direction: initial;
+  }
+  .reklamTitle p {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    color: white;
+    max-width: 180px;
+  }
+  .mobileReklamMain {
+    height: 240px;
+    background-color: #2e2e2e;
+    padding: 50px;
+  }
+  .reklamphone img {
+    height: 230px;
+  }
+  .reklamAvatar {
+    position: absolute;
+    right: 2%;
+    left: initial;
+    transform: initial;
+    bottom: 0%;
+  }
+  .reklamAvatar img {
+    width: 190px;
+  }
+  .reklamphone {
+    position: absolute;
+    right: 28%;
+    bottom: 0%;
+  }
+}
+
+@media (min-width: 992px) {
+  .reklamTitle p {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: white;
+    max-width: 240px;
+  }
+  .reklamTitle p {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 30px;
+    color: white;
+    max-width: 300px;
+  }
+  .mobile-icons {
+    display: flex;
+    flex-direction: initial;
+    gap: 10px;
+  }
+  .mobile-icons img{
+    max-width: 9rem;
+  }
+
+  .mobileReklamMain {
+    height: 260px;
+  }
+  .reklamphone img {
+    height: 270px;
+  }
+  .reklamAvatar {
+    position: absolute;
+    right: 2%;
+    left: initial;
+    transform: initial;
+    bottom: 0%;
+  }
+  .reklamAvatar img {
+    width: 210px;
+  }
+  .reklamPhoneone {
+    display: none;
+  }
+  .reklamPhonesecond {
+    display: inline-block;
+    height: 240px !important;
+  }
+
+  .reklamphone {
+    position: absolute;
+    right: 25%;
+    bottom: 0%;
+  }
+ 
+}
+@media (min-width: 1200px) {
+  .reklamTitle p {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: white;
+    max-width: 300px;
+  }
+  .mobile-icons {
+    display: flex;
+    flex-direction: initial;
+    gap: 10px;
+  }
+  .mobile-icons img {
+    max-width: 10rem;
+    margin-bottom: 0.1rem;
+  }
+  .reklamPhonesecond {
+    display: inline-block;
+    height: 250px !important;
+  }
+  .reklamAvatar img {
+    width: 210px;
+  }
+  .reklamphone {
+    position: absolute;
+    right: 22%;
+    bottom: 0%;
+  }
+}

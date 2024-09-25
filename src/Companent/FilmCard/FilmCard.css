@@ -1,0 +1,41 @@
+.filmCard {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 7px;
+  cursor: pointer;
+}
+.filmCardImg img {
+  width: 58px;
+  aspect-ratio: auto 58/80;
+  height: 80px;
+}
+.filmCardtext{
+    display: flex;
+    flex-direction: column;
+    transition: all .4s;
+}
+.filmCardtext:hover{
+    opacity: 0.6;
+}
+.filmOriginalTitle {
+  font: 600 13px "Proxima";
+  margin-bottom: 2px;
+  color: white;
+}
+.filmSecondTitle {
+  font: 400 12px "Proxima";
+  color: white;
+  
+}
+.filmDate {
+  display: flex;
+  align-items: center;
+  margin-top: 3px;
+  gap: 6px;
+}
+.filmDate span{
+    font: 600 13px 'Proxima';
+    color: #fff;
+    white-space: nowrap;
+}

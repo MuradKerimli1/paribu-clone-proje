@@ -1,0 +1,58 @@
+.uyeRightItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  color: white;
+}
+.uyeRightIMage {
+  max-width: 45%;
+  object-fit: cover;
+  align-items: start;
+}
+.numberRightItem {
+  display: flex;
+  align-items: center;
+ 
+  gap: 10px;
+  color: white;
+  font: 600 13px "Proxima";
+}
+.uyeRightItem p {
+  font: 600 14px "Proxima";
+  line-height: 20px;
+}
+.uyeRightItem span {
+  font: italic 600 13px "Proxima";
+}
+@media (max-width: 550px) {
+  .uyeRightItem {
+    color: white;
+    justify-content: center;
+    align-items: center;
+  }
+  .uyeRightIMage {
+    max-width: 100%;
+    object-fit: cover;
+    align-items: start;
+  }
+  .numberRightItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: white;
+    font: 600 13px "Proxima";
+    text-align: center;
+    width: 100%;
+  }
+  .uyeRightItem p {
+    font: 600 16px "Proxima";
+    line-height: 20px;
+  }
+  .uyeRightItem span {
+    font: italic 600 16px "Proxima";
+  }
+}

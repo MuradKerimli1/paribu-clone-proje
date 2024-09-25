@@ -1,0 +1,143 @@
+.giftCardOn {
+  width: 100%;
+  height: auto;
+  padding: 32px;
+  border-radius: 32px;
+  border: 2px solid #a4b446;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 32px;
+  transition: 0.3s;
+}
+
+.giftCardIn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.giftCardHeader {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  color: white;
+}
+
+.giftCardImage {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.giftButtons {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.giftCardImage{
+  border-radius: 25px;
+}
+
+.giftCardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.giftCardrice {
+  font: 600 30px "Proxima";
+  white-space: nowrap;
+}
+
+.giftCardDec {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.giftCardDec span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-transform: uppercase;
+  font: 600 15px "Proxima";
+  white-space: nowrap;
+}
+.giftCardBuy {
+  background-color: #98a726;
+  color: white;
+  font: 600 15px "Proxima";
+  padding: 7px 15px;
+  width: 80%;
+  border-radius: 25px;
+  border: 2px solid #98a726;
+  margin: 0 auto;
+  white-space: nowrap;
+}
+
+.giftCardIncele {
+  background-color: transparent;
+  color: white;
+  font: 600 15px "Proxima";
+  padding: 7px 15px;
+  width: 80%;
+  border-radius: 25px;
+  border: 2px solid white;
+  margin: 0 auto;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+.giftCardIncele:hover {
+  background-color: #98a726;
+  color: white;
+  border-color: #98a726;
+}
+
+.image-loading-placeholder {
+  width: 100%;
+  height: 350px; /* Adjust height based on your image container */
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  border-radius: 25px;
+}
+
+@media (max-width: 400px) {
+  .giftCardDec span {
+    font: 600 13px "Proxima";
+  }
+  .giftCardrice {
+    font: 600 20px "Proxima";
+  }
+}
+
+@media (min-width: 550px) and (max-width: 672px) {
+  .giftCardDec span {
+    font: 600 12px "Proxima";
+  }
+  .giftCardrice {
+    font: 600 22px "Proxima";
+  }
+}
+
+@media (min-width: 673px) {
+  .giftCardDec span {
+    font: 600 15px "Proxima";
+  }
+  .giftCardrice {
+    font: 600 30px "Proxima";
+  }
+}

@@ -1,0 +1,16 @@
+.companyHead{
+    width: 100%;
+    height: 270px;
+    background: url('https://www.paribucineverse.com/assets/img/page-campaigns/kampanyalar_hero_banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.companyTitle{
+    font: 600 33px 'Proxima';
+    color: white;
+}

@@ -1,0 +1,24 @@
+.salonCards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+}
+.salonTitleNon{
+  color: white;
+  font: 600 25px 'Proxima';
+  text-transform: capitalize;
+}
+@media(min-width:560px){
+  .salonCards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+@media(min-width:820px){
+  .salonCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+}

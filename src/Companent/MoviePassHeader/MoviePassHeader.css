@@ -1,0 +1,25 @@
+.moviePassHead {
+  position: relative;
+  width: 100%;
+  height: calc(80vh - 10px);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("https://www.paribucineverse.com/assets/img/page-moviepass/moviepass-hero-4-1920x900px.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 -50px 50px -20px rgba(0, 0, 0, 0.8);
+}
+.moviePassTitle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5%;
+  font: 600 30px "Proxima";
+  color: white;
+  white-space: nowrap;
+}
+@media (max-width: 992px) {
+  .moviePassTitle {
+    font: 600 20px "Proxima";
+  }
+}

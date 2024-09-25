@@ -1,0 +1,76 @@
+.movieFilterContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px 0;
+}
+.movieCheck {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.movieNameCheck {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 38px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding-bottom: 5px;
+}
+.movieNameCheck:hover {
+  color: white;
+}
+.movieSort {
+  display: flex;
+  justify-content: end;
+}
+
+.movieSort select {
+  background-color: #404040;
+  color: #dee2e8;
+  border-color: transparent;
+  display: block;
+  padding: 10px 25px;
+  outline: none;
+  font: 600 16px "Proxima";
+  padding-left: 8px;
+  padding-right: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.movieNameCheck.active {
+  color: white;
+  font: 600 22px "Proxima";
+  border-bottom: 3px solid white;
+}
+
+@media (min-width: 822px) {
+  .movieFilterContainer {
+    flex-direction: initial;
+    justify-content: space-between;
+
+    padding: 15px 0;
+  }
+  .movieNameCheck {
+    font-weight: 400;
+    font-size: 22px;
+  }
+  .movieNameCheck.active {
+    font: 600 25px "Proxima";
+  }
+}
+@media (min-width: 1150px) {
+  .movieNameCheck {
+    font-size: 30px;
+  }
+  .movieNameCheck.active {
+    color: white;
+    font: 600 34px "Proxima";
+    border-bottom: 3px solid white;
+  }
+}

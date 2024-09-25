@@ -1,0 +1,109 @@
+.searchContainer {
+  width: 95%;
+  height: 100vh; /* Full viewport height */
+  margin: 0 auto;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.searchContainer_header {
+  position: relative;
+  width: 100%;
+}
+
+.searchcotainer-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: white;
+  padding: 5px;
+  z-index: 3;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.searchcotainer-close img {
+  width: 24px;
+  height: 24px;
+}
+
+.searchContainer_header input {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #3f3f3f;
+  padding: 10px 0;
+  outline: none;
+  color: white;
+}
+
+.searchContainer_header input::placeholder {
+  font-size: 18px;
+}
+
+.searhContainer {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 50px); /* Adjust for header height */
+}
+
+.searchMainContainer {
+  display: flex;
+  gap: 30px;
+  flex: 1; /* Allow it to grow */
+  overflow-y: auto; /* Allow vertical scrolling */
+}
+
+.popularOneri {
+  font: 600 16px "Proxima";
+  color: #fff;
+  margin: 15px 0;
+}
+
+.AramaSonuc {
+  font: 600 16px "Proxima";
+  color: #98a726;
+  margin: 15px 0;
+}
+/* For WebKit browsers (Chrome, Safari) */
+.searchMainContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.searchMainContainer::-webkit-scrollbar-thumb {
+  background-color: #98a726;
+  border-radius: 4px;
+}
+
+.searchMainContainer::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* For Firefox */
+.searchMainContainer {
+  scrollbar-width: thin;
+  scrollbar-color: #98a726 rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 780px) {
+  .searchMainContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .searchContainer {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+
+  .searchContainer_header input::placeholder {
+    font-size: 22px;
+  }
+
+  .searchContainer_header input {
+    padding: 20px 0;
+  }
+}

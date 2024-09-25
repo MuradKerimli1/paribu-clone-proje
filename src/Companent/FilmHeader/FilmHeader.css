@@ -1,0 +1,16 @@
+.filmHeaderBg {
+  background: url("https://www.paribucineverse.com/assets/img/inner_page/banner.jpg");
+  width: 100%;
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.filmHeaderContext {
+  font: 600 30px "Proxima";
+  color: white;
+}

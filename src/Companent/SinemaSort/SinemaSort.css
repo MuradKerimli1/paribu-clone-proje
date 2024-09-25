@@ -1,0 +1,22 @@
+.sinemaSort {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.sinemaSort p{
+    color: #939393;
+    font: 600 22px 'Proxima';
+    cursor: pointer;
+}
+.sinemaSort p.active{
+  color: white;
+  border-bottom: 2px solid white;
+  font-size: 23px;
+}
+@media(max-width:820px){
+  .sinemaSort p{
+    color: #939393;
+    font: 600 17px 'Proxima';
+    cursor: pointer;
+}
+}

@@ -1,0 +1,58 @@
+.cgvFag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+.fagTitle p {
+  font: 600 30px "Proxima";
+  color: white;
+  padding-bottom: 25px;
+}
+.fagAccardion {
+  padding-bottom: 30px;
+  width: 75%;
+}
+.fagButton button {
+  background-color: transparent;
+  color: white;
+  font: 600 17px "Proxima";
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 25px;
+  cursor: pointer;
+}
+@media(max-width:992px){
+    .fagAccardion {
+        padding-bottom: 30px;
+        width: 100%;
+      }
+}
+
+@media (max-width: 600px) {
+    .fagTitle p {
+      font-size: 24px; /* Başlık font boyutunu küçültüyoruz */
+    }
+  
+    .fagButton button {
+      font-size: 14px; /* Buton yazı font boyutunu küçültüyoruz */
+      padding: 8px 16px; /* Buton paddingini küçültüyoruz */
+    }
+  
+    /* Accordion icon ve yazı boyutlarını küçültüyoruz */
+    .MuiAccordionSummary-root .MuiTypography-root {
+      font-size: 15px; /* Soru font boyutunu küçültüyoruz */
+    }
+  
+    .MuiAccordionDetails-root .MuiTypography-root {
+      font-size: 14px; /* Cevap font boyutunu küçültüyoruz */
+    }
+  
+    .MuiSvgIcon-root {
+      font-size: 28px; /* İkon boyutunu küçültüyoruz */
+    }
+  }
+  

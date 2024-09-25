@@ -1,0 +1,117 @@
+.popularCompany {
+    width: 100%;
+    display: flex;
+    gap: 25px;
+    color: white;
+   
+  }
+  
+  .popularCompanyLeft {
+    position: relative;
+    background: url("https://www.paribucineverse.com/Files/Campaigns/Kampanya_Gorsellerinin_Yenilenmesi_540x200-06.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-basis: 45%;
+    border-radius: 16px;
+    height: auto;
+    min-height: 200px;
+  }
+  
+  .popularCompanyLeft span {
+    position: absolute;
+    left: 28px;
+    top: 28px;
+    width: 94px;
+    height: 32px;
+    background: #fb2b29;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    line-height: 32px;
+  }
+  
+  .popularCompanyRight {
+    flex-basis: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .companyDate p {
+    color: #898989;
+    font: 400 16px "Proxima";
+  }
+  
+  .companyDate span {
+    color: #86a026;
+    font: 500 17px "Proxima";
+    margin-left: 5px;
+  }
+  
+  .popularCompanyTitle p {
+    font: 600 40px "Proxima";
+    color: white;
+    max-width: 500px;
+  }
+  
+  .popularCompanyDescription p {
+    color: white;
+    font: 500 18px "Proxima";
+    margin: 15px 0;
+  }
+  
+  .popularCompanyButton button {
+    background-color: transparent;
+    font: 600 15px "Proxima";
+    border-radius: 25px;
+    color: white;
+    padding: 12px 20px;
+    border: 1px solid white;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 992px) {
+    .popularCompany {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+  
+    .popularCompanyLeft,
+    .popularCompanyRight {
+      flex-basis: 100%;
+      width: 100%;
+    }
+  
+    .popularCompanyLeft {
+      height: 200px;
+    }
+    .companyDate p {
+        color: #898989;
+        font: 400 13px "Proxima";
+      }
+      
+      .companyDate span {
+        color: #86a026;
+        font: 500 14px "Proxima";
+        margin-left: 5px;
+      }
+  
+    .popularCompanyTitle p {
+      font-size: 27px;
+      max-width: 100%;
+    }
+  
+    .popularCompanyDescription p {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+  
+    .popularCompanyButton button {
+      max-width: 50%;
+      
+    }
+  }
+  

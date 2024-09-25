@@ -1,0 +1,141 @@
+.nav {
+    position: sticky;
+    top: 0;
+    padding: 10px 0 7px 0;
+    background-color: #121212; 
+    z-index: 98; 
+  }
+  /* ok */
+  
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar-bars-open,
+  .navbar-bars-close,
+  .navbar-search-icon {
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .navbar-bars-close {
+    display: none;
+  }
+  
+  .navbar-bars.active .navbar-bars-close {
+    display: block;
+  }
+  
+  .navbar-bars.active .navbar-bars-open {
+    display: none;
+  }
+  
+  .navbar-list {
+    position: fixed;
+    top: 45px;
+    color: white;
+    background-color: #1e1e1e;
+    height: 100vh;
+    width: 100%;
+    padding: 15px;
+    left: -100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s;
+    z-index: 998 !important; 
+  }
+  
+  .navbar-list.active {
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .navbar-login {
+    background-color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    border-color: transparent;
+    display: none;
+  }
+  
+  .navbar-login-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 3px 15px;
+  }
+  
+  .navbar-login-left img {
+    width: 35px;
+    height: 25px;
+  }
+  
+  .navbar-login-giris {
+    font: 600 14px "Proxima";
+    color: black;
+  }
+  
+  .navbar-login-uye {
+    font: 500 14px "Proxima";
+    color: black;
+  }
+  
+  .navbar-search-container {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 95%);
+    color: white;
+    height: 100vh;
+    width: 100%;
+    padding: 15px;
+    z-index: 999 !important; 
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  
+  .navbar-search-container.active {
+    top: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .navbar-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  @media (min-width: 992px) {
+    .navbar-bars {
+      display: none;
+    }
+  
+    .navbar-list {
+      all: unset;
+    }
+  
+    .navbar-search-icon {
+      font-size: 25px;
+    }
+  
+    .navbar-login-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 3px 12px;
+    }
+  }
+  
+  @media (min-width: 1150px) {
+    .navbar-login {
+      display: inline-block;
+  }
+  }
+  
