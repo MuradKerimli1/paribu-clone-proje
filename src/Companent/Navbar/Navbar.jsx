@@ -51,6 +51,8 @@ function Navbar() {
               <SearchContainer handleToggleSearch={handleToggleSearch} />
             </div>
           </div>
+          <div className="Login-Container">
+            <p>Login</p>
           <div className="navbar-login">
             <div className="navbar-login-container">
               <div className="navbar-login-left">
@@ -66,6 +68,8 @@ function Navbar() {
               </div>
             </div>
           </div>
+          </div>
+        
         </div>
       </div>
     </div>
