@@ -1,6 +1,9 @@
 {
-    "rewrites": [
-      { "source": "/:path*/", "destination": "/:path*" }
-    ]
-  }
-  
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://paribu-clone-proje.vercel.app/$1",
+      "permanent": true
+    }
+  ]
+}
