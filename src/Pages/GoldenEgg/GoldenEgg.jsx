@@ -31,7 +31,7 @@ function GoldenEgg() {
             </li>
           </ul>
         </div>
-        <div className="goldenEggImage" >
+        <div className="goldenEggImage">
           <img src="/Images/golden-egg-banner.svg" alt="egg" id="EggHomeSec" />
         </div>
         <div className="goldenEggText">
