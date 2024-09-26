@@ -5,6 +5,7 @@ import "./Navbar.css";
 import ParibuLogo from "../ParibuLogo/ParibuLogo";
 import NavbarList from "../NavbarList/NavbarList";
 import SearchContainer from "../SearchContainer/SearchContainer";
+import LoginContainer from "../LoginContainer/LoginContainer";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,25 +52,9 @@ function Navbar() {
               <SearchContainer handleToggleSearch={handleToggleSearch} />
             </div>
           </div>
-          <div className="Login-Container">
-            <p>Login</p>
-          <div className="navbar-login">
-            <div className="navbar-login-container">
-              <div className="navbar-login-left">
-                <img
-                  src="/Images/cgv_movie_pass_1x.svg"
-                  alt="cgv-cinema"
-                  className="navbar-login-image"
-                />
-              </div>
-              <div className="navbar-login-right">
-                <p className="navbar-login-giris">Giriş Yap</p>
-                <span className="navbar-login-uye">veya Üye Ol</span>
-              </div>
-            </div>
+          <div className="Login-Container-Second">
+           <LoginContainer/>
           </div>
-          </div>
-        
         </div>
       </div>
     </div>
