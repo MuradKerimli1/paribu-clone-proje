@@ -4,6 +4,7 @@ import { GlobalContext } from "../../Context";
 import ParibuLogo from "../ParibuLogo/ParibuLogo";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import Loading from "../Loading/Loading";
 
 function Footer() {
   const { vizyonMovies, yakindaMovies, salonlarWievData } =
@@ -26,6 +27,9 @@ function Footer() {
   };
   function handleSend(vizyon) {
     navigate(`/selectedMovie/${vizyon.title}`);
+  }
+  if (vizyonMovies == 0 && yakindaMovies.length == 0) {
+    return <Loading />;
   }
 
   return (
@@ -104,10 +108,12 @@ function Footer() {
                   openSections.sinemalar ? "active" : ""
                 }`}
               >
-                <span onClick={()=>navigate("/moviePass")}>CGV MoviePass</span>
-                <span onClick={()=>navigate("/cocukAile")}>Çocuk Aile</span>
-                <span onClick={()=>navigate("/company")}>Kampanyalar</span>
-                <span onClick={()=>navigate("/goldenEgg")}>Golden Egg</span>
+                <span onClick={() => navigate("/moviePass")}>
+                  CGV MoviePass
+                </span>
+                <span onClick={() => navigate("/cocukAile")}>Çocuk Aile</span>
+                <span onClick={() => navigate("/company")}>Kampanyalar</span>
+                <span onClick={() => navigate("/goldenEgg")}>Golden Egg</span>
               </div>
             </li>
             <li>

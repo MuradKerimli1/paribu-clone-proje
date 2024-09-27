@@ -11,12 +11,15 @@ import SelectedMovie from "./Pages/SelectedMovie/SelectedMovie";
 import GoldenEgg from "./Pages/GoldenEgg/GoldenEgg";
 import CocukAile from "./Pages/CocukAile/CocukAile";
 import Sinemalar from "./Pages/Sinemalar/Sinemalar";
+import LoginGiris from "./Pages/LoginGiris/LoginGiris";
+import LoginUye from "./Pages/LoginUye/LoginUye";
 
 function App() {
   return (
     <GlobalProvider>
       <Routes>
-        <Route path="/" element={<Layout />}>c
+        <Route path="/" element={<Layout />}>
+          c
           <Route index element={<Home />} />
           <Route path="/filmler" element={<Movies />} />
           <Route path="/company" element={<Company />} />
@@ -26,6 +29,8 @@ function App() {
           <Route path="/goldenEgg" element={<GoldenEgg />} />
           <Route path="/cocukAile" element={<CocukAile />} />
           <Route path="/sinemalar" element={<Sinemalar />} />
+          <Route path="/loginGiris" element={<LoginGiris />} />
+          <Route path="/loginUye" element={<LoginUye />} />
         </Route>
       </Routes>
     </GlobalProvider>
