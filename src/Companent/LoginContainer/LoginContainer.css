@@ -86,6 +86,7 @@
   gap: 5px;
   text-transform: capitalize;
   cursor: pointer;
+  white-space: nowrap;
 }
 .accaount-exit,
 .accauntIcon {
