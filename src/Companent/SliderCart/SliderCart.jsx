@@ -20,7 +20,10 @@ function SliderCart({ element, handleBuyTicketClick }) {
         </span>
       </div>
       <div className="sliderCard-buttons">
-        <button className="sliderBuy-button" onClick={handleBuyTicketClick}>
+        <button
+          className="sliderBuy-button"
+          onClick={() => handleBuyTicketClick(element.id)}
+        >
           Hemen Bilet Al
         </button>
         <button

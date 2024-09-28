@@ -29,11 +29,11 @@ function Movies() {
   const handleSortChange = (sortType) => {
     setSortType(sortType);
   };
-  function movieShowError() {
+  function movieShowError(ElementId) {
     if (!accauntPerson) {
       setShowError(true);
     } else {
-      navigateTickett("/buyTicket");
+      navigateTickett(`/buyTicket/${ElementId}`);
     }
   }
 

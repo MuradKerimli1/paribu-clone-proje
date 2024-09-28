@@ -1,18 +1,22 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./SelectedMovie.css";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { GlobalContext } from "../../Context";
 import Loading from "../../Companent/Loading/Loading";
 import VizyonSlider from "../../Companent/VizyonSlider/VizyonSlider";
 import MovieBrand from "../../Companent/MovieBrand/MovieBrand";
 import HomeCompany from "../../Companent/HomeCompany/HomeCompany";
 import FormYorum from "../../Companent/FormYorum/FormYorum";
+import LoginError from "../LoginError/LoginError";
 
 function SelectedMovie() {
-  const { movieData, fetchVideos, videos } = useContext(GlobalContext);
+  const { movieData, fetchVideos, videos, accauntPerson } =
+    useContext(GlobalContext);
   const { name } = useParams();
+  const navigateTickette = useNavigate();
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [activeMovie, setActiveMovie] = useState(false);
+  const [showErrore, setShowErrore] = useState(false);
 
   const selectedMovie = movieData?.find(
     (movie) => movie.title.trim().toLowerCase() === name.trim().toLowerCase()
@@ -42,9 +46,17 @@ function SelectedMovie() {
       commentsSection.scrollIntoView({ behavior: "smooth" });
     }
   };
+  function movieShowErrore(ElementId) {
+    if (!accauntPerson) {
+      setShowErrore(true);
+    } else {
+      navigateTickette(`/buyTicket/${ElementId}`);
+    }
+  }
 
   return (
     <div className="selectedMovie">
+      {showErrore && <LoginError onClose={() => setShowErrore(false)} />}
       <div
         className="selectedMovieHeader"
         style={{
@@ -124,7 +136,12 @@ function SelectedMovie() {
               </div>
             </div>
             <div className="selectedMovieButtons">
-              <button className="bilet">Hemen Bilet Al</button>
+              <button
+                className="bilet"
+                onClick={() => movieShowErrore(selectedMovie.id)}
+              >
+                Hemen Bilet Al
+              </button>
               <button
                 className="fragman"
                 onClick={() => setActiveMovie((prev) => !prev)}

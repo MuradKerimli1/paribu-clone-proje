@@ -62,3 +62,8 @@
   color: black;
   font-size: 17px;
 }
+@media (min-width: 1150px) {
+  .navbar-login-context {
+    display: inline-block;
+  }
+}

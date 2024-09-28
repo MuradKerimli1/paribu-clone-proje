@@ -19,11 +19,11 @@ function Home() {
   const navigateTicket = useNavigate();
   const [showLoginError, setShowLoginError] = useState(false);
 
-  const handleBuyTicketClick = () => {
+  const handleBuyTicketClick = (ElementId) => {
     if (!accauntPerson) {
       setShowLoginError(true);
     } else {
-      navigateTicket('/buyTicket')
+      navigateTicket(`/buyTicket/${ElementId}`);
     }
   };
 

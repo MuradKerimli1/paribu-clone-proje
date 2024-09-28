@@ -1,7 +1,9 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 function Ticket() {
-  return <div>Ticket Page</div>;
+  const { id } = useParams();
+  return <div>Ticket Page {id}</div>;
 }
 
 export default Ticket;

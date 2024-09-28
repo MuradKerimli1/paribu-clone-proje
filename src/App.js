@@ -20,7 +20,6 @@ function App() {
     <GlobalProvider>
       <Routes>
         <Route path="/" element={<Layout />}>
-          c
           <Route index element={<Home />} />
           <Route path="/filmler" element={<Movies />} />
           <Route path="/company" element={<Company />} />
@@ -32,7 +31,7 @@ function App() {
           <Route path="/sinemalar" element={<Sinemalar />} />
           <Route path="/loginGiris" element={<LoginGiris />} />
           <Route path="/loginUye" element={<LoginUye />} />
-          <Route path="/buyTicket" element={<Ticket />} />
+          <Route path="/buyTicket/:id" element={<Ticket />} />
         </Route>
       </Routes>
     </GlobalProvider>
