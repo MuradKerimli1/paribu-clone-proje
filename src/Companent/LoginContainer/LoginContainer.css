@@ -47,7 +47,6 @@
   flex-direction: column;
   z-index: 9;
   gap: 10px;
-
 }
 .navbar-login-accatunt-Head {
   width: 32px;
@@ -67,9 +66,10 @@
 .navbar-login-accatunt-Context {
   position: absolute;
   top: 50px;
+  right: -100%;
   transform: translateX(-50%);
   background-color: white;
-  min-width: 160px;
+  min-width: 100px;
   border-radius: 8px;
 }
 .navbar-login-accatunt-Context ul {
@@ -96,6 +96,15 @@
 @media (min-width: 1150px) {
   .navbar-login {
     display: inline-block;
+  }
+  .navbar-login-accatunt-Context {
+    position: absolute;
+    top: 50px;
+    right: initial;
+    transform: translateX(-50%);
+    background-color: white;
+    min-width: 160px;
+    border-radius: 8px;
   }
   .navbar-login-context {
     display: inline-block;
