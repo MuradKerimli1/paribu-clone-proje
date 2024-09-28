@@ -1,6 +1,6 @@
 .loginUye {
   background: linear-gradient(180deg, #121212 0%, #383838 45.44%, #121212 100%);
-  min-height: 110vh;
+  min-height: 120vh;
   display: flex;
   flex-direction: column;
 }
@@ -25,7 +25,7 @@
       #383838 45.44%,
       #121212 100%
     );
-    min-height: 115vh;
+
     display: flex;
     flex-direction: column;
   }
@@ -38,7 +38,6 @@
       #383838 45.44%,
       #121212 100%
     );
-    min-height: 120vh;
     display: flex;
     flex-direction: column;
   }
