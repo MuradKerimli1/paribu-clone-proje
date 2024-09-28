@@ -73,7 +73,7 @@ function Sinemalar() {
   return (
     <div className="sinemalar">
       <FilmHeader filmContext={"Sinema Salonları"} />
-      <div className="sinemaContext container">
+      <div className="sinemaContext containerer">
         <MovieBrand Brand={"Sinema Salonları"} />
         <div className="SinemaCards">
           <SinemaFilteres

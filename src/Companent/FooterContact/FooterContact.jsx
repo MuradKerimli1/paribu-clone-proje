@@ -4,7 +4,7 @@ import "./FooterContact.css";
 function FooterContact() {
   return (
     <div className="footerContactBg">
-      <div className="footerContactMain container">
+      <div className="footerContactMain containerer">
         <div className="contact-text">
           <p>Bizi Takip Et</p>
         </div>

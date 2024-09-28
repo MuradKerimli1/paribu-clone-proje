@@ -13,6 +13,7 @@ import CocukAile from "./Pages/CocukAile/CocukAile";
 import Sinemalar from "./Pages/Sinemalar/Sinemalar";
 import LoginGiris from "./Pages/LoginGiris/LoginGiris";
 import LoginUye from "./Pages/LoginUye/LoginUye";
+import Ticket from "./Pages/Ticket/Ticket";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/sinemalar" element={<Sinemalar />} />
           <Route path="/loginGiris" element={<LoginGiris />} />
           <Route path="/loginUye" element={<LoginUye />} />
+          <Route path="/buyTicket" element={<Ticket />} />
         </Route>
       </Routes>
     </GlobalProvider>

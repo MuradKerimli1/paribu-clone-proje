@@ -1,0 +1,63 @@
+.navbar-login-context {
+  position: absolute;
+  top: 55px;
+  transform: translateX(-50%);
+  border-radius: 16px;
+  z-index: 9;
+  background-color: white;
+  min-width: 350px;
+  height: auto;
+  padding: 10px;
+  padding-top: 10px !important;
+  padding-bottom: 24px !important;
+  transition: all 0.4s;
+}
+.login-context-btns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+.context-giris {
+  width: 150px;
+  height: 46px;
+  font: 600 16px "Proxima";
+  background-color: #98a726;
+  color: white;
+  border-radius: 20px;
+  border-color: transparent;
+  cursor: pointer;
+}
+.context-uye {
+  width: 150px;
+  height: 46px;
+  font: 600 16px "Proxima";
+  background-color: transparent;
+  color: #3f444c;
+  border-radius: 20px;
+  border: 2px solid #ededed;
+  cursor: pointer;
+}
+.navbar-context-img {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.navbar-context-img img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.navbar-context-text p {
+  font: 600 15px "Proxima";
+  line-height: 22px;
+  text-align: center;
+  opacity: 0.8;
+  color: #1e1e1e;
+}
+.navbar-context-text span {
+  text-decoration: underline;
+  color: black;
+  font-size: 17px;
+}

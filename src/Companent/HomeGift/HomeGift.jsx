@@ -17,7 +17,7 @@ function HomeGift() {
   }
 
   return (
-    <div className="homeGift container">
+    <div className="homeGift containerer">
       <Swiper
         breakpoints={{
           0: {

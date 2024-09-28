@@ -19,8 +19,8 @@ function Navbar() {
   }
 
   return (
-    <div className="nav">
-      <div className="nav-container container">
+    <div className="nave">
+      <div className="nav-container containerer">
         <div
           className={`navbar-bars ${isMenuOpen ? "active" : ""}`}
           onClick={handleToggleMenu}

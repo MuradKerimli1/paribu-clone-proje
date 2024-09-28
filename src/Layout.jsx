@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-
 import { Outlet, useLocation } from "react-router-dom";
 import FooterContact from "./Companent/FooterContact/FooterContact";
 import Navbar from "./Companent/Navbar/Navbar";
@@ -11,12 +10,20 @@ function Layout() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
+
+  const hideNavbar =
+    location.pathname === "/loginGiris" || location.pathname === "/loginUye";
+
   return (
     <div>
-      <Navbar />
+      {!hideNavbar && <Navbar />}
       <Outlet />
-      <FooterContact />
-      <Footer />
+      {!hideNavbar && (
+        <>
+          <FooterContact />
+          <Footer />
+        </>
+      )}
     </div>
   );
 }

@@ -14,7 +14,7 @@ const salonlarData = [
 ];
 function AyricalikliSolanlar() {
   return (
-    <div className="salonlarMain container">
+    <div className="salonlarMain containerer">
       <SliderHeader vizyonYazi={"Ayrıcalıklı Salonlar"} />
       <div className="salonlar">
         {salonlarData.map((salon) => (

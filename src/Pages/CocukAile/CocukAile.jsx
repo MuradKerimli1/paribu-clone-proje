@@ -13,7 +13,7 @@ function CocukAile() {
   return (
     <div className="cocukAile">
       <div className="cocukAileHeaderBg">
-      <div className="cocukAileHeader container">
+      <div className="cocukAileHeader containerer">
         <ul className="cocukAileList">
           <li>
             <a href="#aileKUlub">
@@ -46,7 +46,7 @@ function CocukAile() {
       <div className="cocukAileMainImage">
         <img src="/Images/aile-cocuk-banner.svg" alt="mainImage" />
       </div>
-      <div className="cocukAileAbout container" id="aileKUlub">
+      <div className="cocukAileAbout containerer" id="aileKUlub">
         <div className="cocukAileAboutContent">
           <div className="cocukAileAboutLeft">
             <p>Nedir bu “CGV Çocuk Aile Kulübü”?</p>
@@ -71,7 +71,7 @@ function CocukAile() {
         <img src="/Images/union-red.svg" alt="ballon" className="uniionLeft" />
       </div>
       <div className="cocukAileUyeBg" id="aileCocuk">
-        <div className="cocukAileUye container">
+        <div className="cocukAileUye containerer">
           <div className="cocukAileUyeLeft">
             <img src="/Images/ballon-boy.png" alt="balon-boy" />
             <div className="uyeLeftContext">
@@ -116,7 +116,7 @@ function CocukAile() {
           </div>
         </div>
       </div>
-      <div className="uyeAyricalik container" id="uyeAyri">
+      <div className="uyeAyricalik containerer" id="uyeAyri">
         <p className="uyeAyricalikTitle">CGV Çocuk Aile Kulübü Ayrıcalıkları</p>
         <div className="uyeAyricalikItems">
           <UyeAyricalik
@@ -149,20 +149,20 @@ function CocukAile() {
         <img src="/Images/ballon.svg" alt="ballon" className="uyeBalonRight" />
       </div>
       <div className="cgvOzelEndirimlerBg">
-        <div className="container">
+        <div className="containerer">
           <CgvEndirim />
         </div>
       </div>
       <div className="cgvFilmFestivalBg">
-        <div className="cgvFilmFestival container">
+        <div className="cgvFilmFestival containerer">
           <CgvFestival />
         </div>
       </div>
       <div className="cgOzellikFooter">
-        <div className="cgvOzellikfag container" id="fagozellik">
+        <div className="cgvOzellikfag containerer" id="fagozellik">
           <CgvFag fag={cgvPassFag} max={5} />
         </div>
-        <div className="cgvOzellikReklam container">
+        <div className="cgvOzellikReklam containerer">
           <MobileReklam />
         </div>
       </div>

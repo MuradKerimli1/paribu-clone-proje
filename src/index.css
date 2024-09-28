@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @font-face {
   font-family: "Proxima";
   src: url("../public/Font/proxima-nova-regular-wisabo/proximanova_regular.ttf");
@@ -16,7 +19,7 @@
   scroll-behavior: smooth;
 }
 
-.container {
+.containerer {
   width: 86% !important;
   margin: 0 auto !important;
 }
@@ -37,7 +40,7 @@ body::-webkit-scrollbar-track {
   body::-webkit-scrollbar {
     width: 5px;
   }
-  .container {
+  .containerer {
     width: 93% !important;
     margin: 0 auto !important;
   }

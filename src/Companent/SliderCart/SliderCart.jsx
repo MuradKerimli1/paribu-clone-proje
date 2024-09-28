@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./SliderCart.css";
 import { FaStar } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-function SliderCart({ element }) {
+function SliderCart({ element, handleBuyTicketClick }) {
   const selected = useNavigate();
   return (
     <div className="sliderCard">
@@ -20,7 +20,9 @@ function SliderCart({ element }) {
         </span>
       </div>
       <div className="sliderCard-buttons">
-        <button className="sliderBuy-button">Hemen Bilet Al</button>
+        <button className="sliderBuy-button" onClick={handleBuyTicketClick}>
+          Hemen Bilet Al
+        </button>
         <button
           className="sliderBuy-Incele"
           onClick={() => selected(`/selectedMovie/${element.title}`)}

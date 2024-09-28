@@ -22,7 +22,7 @@ function CompanyDetal() {
 
   return (
     <div className="companyDetalBg">
-      <div className="companyDetal container">
+      <div className="companyDetal containerer">
         <MovieBrand Brand={"Company"} />
         <div className="companyDetalImage">
           <img src={selectedCompany.largeImage} alt="companyImage" />

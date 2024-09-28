@@ -1,0 +1,45 @@
+.loginUye {
+  background: linear-gradient(180deg, #121212 0%, #383838 45.44%, #121212 100%);
+  min-height: 105vh;
+  display: flex;
+  flex-direction: column;
+}
+.login_Section_context {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 0;
+  z-index: 10;
+  max-width: 500px;
+}
+@media (min-width: 550px) {
+  .loginUye {
+    background: linear-gradient(
+      180deg,
+      #121212 0%,
+      #383838 45.44%,
+      #121212 100%
+    );
+    min-height: 110vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 992px) {
+  .loginUye {
+    background: linear-gradient(
+      180deg,
+      #121212 0%,
+      #383838 45.44%,
+      #121212 100%
+    );
+    min-height: 120vh;
+    display: flex;
+    flex-direction: column;
+  }
+}

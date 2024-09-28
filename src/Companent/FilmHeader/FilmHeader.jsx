@@ -4,7 +4,7 @@ import './FilmHeader.css'
 function FilmHeader({ filmContext }) {
   return (
     <div className="filmHeaderBg">
-      <div className="filmHeaderContext container">
+      <div className="filmHeaderContext containerer">
         <p className="filmHeaderText">{filmContext}</p>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./Home.css";
 import MobileReklam from "../../Companent/MobileReklam/MobileReklam";
 import AyricalikliSolanlar from "../../Companent/AyricalikliSolanlar/AyricalikliSalonlar";
@@ -10,9 +10,22 @@ import { GlobalContext } from "../../Context";
 import VizyonSlider from "../../Companent/VizyonSlider/VizyonSlider";
 import HomeCompany from "../../Companent/HomeCompany/HomeCompany";
 import HomeSlider from "../../Companent/HomeSlider/HomeSlider";
+import LoginError from "../LoginError/LoginError";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
-  const { yakindaMovies, vizyonMovies } = useContext(GlobalContext);
+  const { yakindaMovies, vizyonMovies, accauntPerson } =
+    useContext(GlobalContext);
+  const navigateTicket = useNavigate();
+  const [showLoginError, setShowLoginError] = useState(false);
+
+  const handleBuyTicketClick = () => {
+    if (!accauntPerson) {
+      setShowLoginError(true);
+    } else {
+      navigateTicket('/buyTicket')
+    }
+  };
 
   console.log(vizyonMovies);
   if (vizyonMovies.length === 0 && yakindaMovies.length === 0) {
@@ -21,18 +34,26 @@ function Home() {
 
   return (
     <div>
+      {showLoginError && (
+        <LoginError onClose={() => setShowLoginError(false)} />
+      )}
       <HomeSlider />
       <div className="homeVizyon">
-        <div className="homeConext container">
-          <VizyonSlider movies={vizyonMovies} vizyonYazi={"Vizyonda"} />
+        <div className="homeConext containerer">
           <VizyonSlider
+            movies={vizyonMovies}
+            vizyonYazi={"Vizyonda"}
+            handleBuyTicketClick={handleBuyTicketClick}
+          />
+          <VizyonSlider
+            handleBuyTicketClick={handleBuyTicketClick}
             movies={yakindaMovies}
             vizyonYazi={"Yakinda Vizyonda"}
           />
         </div>
       </div>
       <div className="homeCompanye">
-        <div className="homeCompanyContext container">
+        <div className="homeCompanyContext containerer">
           <HomeCompany />
         </div>
       </div>
@@ -49,7 +70,7 @@ function Home() {
         <AyricalikliSolanlar />
       </div>
       <div className="mobileReklamContainer ">
-        <div className="mobileReklamContainerSecond container">
+        <div className="mobileReklamContainerSecond containerer">
           <MobileReklam />
         </div>
       </div>

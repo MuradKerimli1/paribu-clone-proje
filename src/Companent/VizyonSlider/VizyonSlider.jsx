@@ -7,7 +7,7 @@ import { Navigation } from "swiper/modules";
 import SliderCart from "../SliderCart/SliderCart";
 import SliderHeader from "../SliderHeader/SliderHeader";
 
-function VizyonSlider({ movies, vizyonYazi }) {
+function VizyonSlider({ movies, vizyonYazi, handleBuyTicketClick }) {
   return (
     <div className="vizyonSLider">
       <SliderHeader vizyonYazi={vizyonYazi} />
@@ -28,7 +28,7 @@ function VizyonSlider({ movies, vizyonYazi }) {
               slidesPerView: 3.5,
               spaceBetween: 20,
             },
-            992:{
+            992: {
               slidesPerView: 4.5,
               spaceBetween: 20,
             },
@@ -42,7 +42,11 @@ function VizyonSlider({ movies, vizyonYazi }) {
         >
           {movies.map((element, index) => (
             <SwiperSlide key={index}>
-              <SliderCart key={index} element={element} />
+              <SliderCart
+                key={index}
+                element={element}
+                handleBuyTicketClick={handleBuyTicketClick}
+              />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -51,4 +55,4 @@ function VizyonSlider({ movies, vizyonYazi }) {
   );
 }
 
-export default VizyonSlider;
+export default VizyonSlider;

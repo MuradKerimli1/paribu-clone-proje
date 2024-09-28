@@ -34,7 +34,7 @@ function Footer() {
 
   return (
     <div className="FooterBg">
-      <div className="footerContainer container">
+      <div className="footerContainer containerer">
         <div className="footerMain">
           <ul className="mainList">
             <li>

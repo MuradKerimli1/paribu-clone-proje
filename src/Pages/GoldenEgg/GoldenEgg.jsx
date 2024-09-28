@@ -67,7 +67,7 @@ function GoldenEgg() {
             className="eggPhone"
           />
         </div>
-        <div className="goldenEggAyricalik container">
+        <div className="goldenEggAyricalik containerer">
           <div id="ayricalikTitle">
             <p>Golden Egg Ayrıcalıkları</p>
           </div>
@@ -93,13 +93,13 @@ function GoldenEgg() {
           </div>
         </div>
         <div className="goldenEggFagBg">
-          <div className="goldenEggFag container">
+          <div className="goldenEggFag containerer">
             <p id="fagSeci">Sıkça Sorulan Sorular</p>
             <CgvFag fag={cgvPassFag} max={4} />
           </div>
         </div>
         <div className="goldenEggReklamBg">
-          <div className="goldenEggReklam container">
+          <div className="goldenEggReklam containerer">
             <MobileReklam />
           </div>
         </div>

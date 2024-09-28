@@ -1,0 +1,70 @@
+.loginError {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);   
+}
+
+.loginErrorContext {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  position: relative;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.loginErrorText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+}
+.cgVVBanner {
+  width: 100%;
+  height: 220px;
+}
+.cgVErrorClose {
+  position: absolute;
+  background: none !important;
+  right: 19px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 6;
+  width: 30px;
+  height: 30px;
+}
+.loginErrorContext p {
+  font: 600 14px "Proxima";
+  text-align: center;
+  margin-bottom: 15px;
+}
+.loginErrorBtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.loginErrorContext span {
+  text-align: center;
+  width: 100%;
+  font: 600 15px "Proxima";
+  display: flex;
+  margin: 10px auto;
+  color: #3d4245 !important;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+}

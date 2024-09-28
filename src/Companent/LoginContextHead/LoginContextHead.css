@@ -1,0 +1,47 @@
+.loginContextHd p {
+  font: 600 30px "Proxima";
+  color: white;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.changeLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.changeLogin span {
+  color: white;
+  padding-bottom: 10px;
+  font: 600 22px "Proxima";
+  width: 150px;
+  text-align: center;
+  border-bottom: 2px solid #535353;
+  cursor: pointer;
+}
+.changeLogin span.active {
+  border-bottom: 2px solid white;
+}
+@media (max-width: 550px) {
+  .loginContextHd p {
+    font: 600 24px "Proxima";
+
+    margin-bottom: 20px;
+  }
+  .changeLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .changeLogin span {
+    color: white;
+    padding-bottom: 10px;
+    font: 600 20 px "Proxima";
+    width: 150px;
+    text-align: center;
+    border-bottom: 2px solid #535353;
+    cursor: pointer;
+  }
+  .changeLogin span.active {
+    border-bottom: 2px solid white;
+  }
+}

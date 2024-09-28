@@ -45,7 +45,7 @@ function HomeSlider() {
         backgroundSize: "cover",
       }}
     >
-      <div className="home-slider-container container">
+      <div className="home-slider-container containerer">
         <div className="home-slider-left">
           <div className="home-slider-content">
             <p className="home-slider-title">

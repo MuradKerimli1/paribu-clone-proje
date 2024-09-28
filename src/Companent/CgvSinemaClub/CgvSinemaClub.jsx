@@ -3,7 +3,7 @@ import "./CgvSinemaClub.css";
 
 function CgvSinemaClub() {
   return (
-    <div className="cgvSinemaMain container">
+    <div className="cgvSinemaMain containerer">
       <div className="cgvLogoSinema">
         <img src="/Images/mobile-cinema-club.svg" alt="cgvIcon" loading="lazy" />
       </div>

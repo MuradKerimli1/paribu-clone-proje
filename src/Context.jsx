@@ -394,6 +394,15 @@ export const GlobalProvider = ({ children }) => {
 
   const [salonlarWievData, setSalonlarWievData] = useState(data);
   const [favorites, setFavorites] = useState([]);
+  const [globalPersons, setGlobalPersons] = useState(() => {
+    const storedPersons = localStorage.getItem("globalPersons");
+    return storedPersons ? JSON.parse(storedPersons) : [];
+  });
+
+  const [accauntPerson, setAccauntPerson] = useState(() => {
+    const accauntPer = localStorage.getItem("accauntPerson");
+    return accauntPer ? JSON.parse(accauntPer) : null;
+  });
 
   const vizyonMovies =
     movieData && Array.isArray(movieData) ? movieData.slice(0, 10) : [];
@@ -470,6 +479,10 @@ export const GlobalProvider = ({ children }) => {
         setFavorites,
         addToFavorites,
         removeFromFavorites,
+        globalPersons,
+        setGlobalPersons,
+        accauntPerson,
+        setAccauntPerson,
       }}
     >
       {children}

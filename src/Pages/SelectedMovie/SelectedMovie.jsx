@@ -52,7 +52,7 @@ function SelectedMovie() {
         }}
       >
         <div className="selectedMovieNavbarBg">
-          <div className="selectedMovieNavbar container">
+          <div className="selectedMovieNavbar containerer">
             <div className="movieNavbarLeft">
               <MovieBrand Brand={name} />
             </div>
@@ -78,7 +78,7 @@ function SelectedMovie() {
           </div>
         </div>
 
-        <div className="selectedMovieAbout container">
+        <div className="selectedMovieAbout containerer">
           <div className="selectedMovieImage">
             <img
               src={`https://image.tmdb.org/t/p/w500${selectedMovie.poster_path}`}
@@ -142,11 +142,11 @@ function SelectedMovie() {
         </div>
       </div>
 
-      <div className="selectedMoviePlusIm container">
+      <div className="selectedMoviePlusIm containerer">
         <img src="/Images/nonLogin-banner.png" alt="banner" />
       </div>
       {activeMovie && (
-        <div id="selectedMovieVideo" className="selectedVidd container">
+        <div id="selectedMovieVideo" className="selectedVidd containerer">
           {selectedVideo ? (
             <iframe
               className="iframe"
@@ -166,13 +166,13 @@ function SelectedMovie() {
       <div className="selecteMovieYorum container" id="yorumContainer">
         <FormYorum filmId={selectedMovie.id} />
       </div>
-      <div className="selectedMovieSwiper container">
+      <div className="selectedMovieSwiper containerer">
         <VizyonSlider
           movies={otherMovies}
           vizyonYazi={"Vizyondaki Diğer Filmler"}
         />
       </div>
-      <div className="selectedMovieCompany container">
+      <div className="selectedMovieCompany containerer">
         <HomeCompany />
       </div>
     </div>

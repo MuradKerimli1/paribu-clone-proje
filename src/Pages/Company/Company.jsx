@@ -4,6 +4,7 @@ import CompanyHeader from "../../Companent/CompanyHeader/CompanyHeader";
 import PopularCompany from "../../Companent/PopularCompany/PopularCompany";
 import MovieBrand from "../../Companent/MovieBrand/MovieBrand";
 import CompanyCards from "../../Companent/CompanyCards/CompanyCards";
+import LoginError from "../LoginError/LoginError";
 
 function Company() {
   return (
@@ -12,14 +13,14 @@ function Company() {
         <div className="companyHeaderContainer">
           <CompanyHeader />
         </div>
-        <div className="companyContextContainer container">
-            <div className="companyBrand">
+        <div className="companyContextContainer containerer">
+          <div className="companyBrand">
             <MovieBrand Brand={"Kampanyalar"} />
-            </div>
-         
-            <div className="companyPopularContainer">
+          </div>
+
+          <div className="companyPopularContainer">
             <PopularCompany />
-            </div>
+          </div>
           <CompanyCards />
         </div>
       </div>

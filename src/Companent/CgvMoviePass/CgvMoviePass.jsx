@@ -4,7 +4,7 @@ import './CgvMoviePass.css'
 function CgvMoviePass() {
   return (
     <div className="cgvMoviePass">
-      <div className="cgvMovieContainer container">
+      <div className="cgvMovieContainer containerer">
         <div className="chgMovieLogo">
           <div className="cgvmovieIcon">
             <img src="/Images/cgv-pass-sm.svg" alt="cg" loading="lazy" />
