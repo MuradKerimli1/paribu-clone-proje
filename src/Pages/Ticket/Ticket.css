@@ -1,0 +1,10 @@
+.ticketPage {
+  background: linear-gradient(180deg, #121212 66%, #383838 132.44%, #121212 56%);
+ 
+}
+.ticketContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px 0;
+}

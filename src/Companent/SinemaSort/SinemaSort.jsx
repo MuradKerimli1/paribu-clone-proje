@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./SinemaSort.css";
+import { GlobalContext } from "../../Context";
 
-function SinemaSort({ setSortOrder, seFavOrSin }) {
+function SinemaSort({ setSortOrder, seFavOrSin,setFavoriUye}) {
+  const { accauntPerson } = useContext(GlobalContext);
   const [active, setActive] = useState("sinema");
+  
 
   const handleSort = (order) => {
     setSortOrder(order);
@@ -10,8 +13,12 @@ function SinemaSort({ setSortOrder, seFavOrSin }) {
   };
 
   const handleFavOrSin = (type) => {
-    seFavOrSin(type);
-    setActive(type);
+    if (accauntPerson !== null) {
+      seFavOrSin(type);
+      setActive(type);
+    } else {
+      setFavoriUye(true);
+    }
   };
 
   return (

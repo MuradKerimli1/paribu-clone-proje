@@ -13,12 +13,12 @@ function Layout() {
 
   const hideNavbar =
     location.pathname === "/loginGiris" || location.pathname === "/loginUye";
-
+  const hideFooter = location.pathname.startsWith("/buyTicket");
   return (
     <div>
       {!hideNavbar && <Navbar />}
       <Outlet />
-      {!hideNavbar && (
+      {!hideFooter && !hideNavbar && (
         <>
           <FooterContact />
           <Footer />

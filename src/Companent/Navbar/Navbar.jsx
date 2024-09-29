@@ -35,6 +35,7 @@ function Navbar() {
         <div className="navbar-logo">
           <ParibuLogo />
         </div>
+
         <div className={`navbar-list ${isMenuOpen ? "active" : ""}`}>
           <NavbarList onMenuClose={handleToggleMenu} />
         </div>
@@ -53,7 +54,7 @@ function Navbar() {
             </div>
           </div>
           <div className="Login-Container-Second">
-           <LoginContainer/>
+            <LoginContainer />
           </div>
         </div>
       </div>

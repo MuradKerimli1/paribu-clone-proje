@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./SinemaFilteres.css";
 import SinemaSearching from "../SinmeSearching/SinemaSearching";
 import SinemaChooose from "../SinemaChooose/SinemaChooose";
 import { GlobalContext } from "../../Context";
 import SinemaSort from "../SinemaSort/SinemaSort";
+import LoginError from "../../Pages/LoginError/LoginError";
 
 function SinemaFilteres({
   setSelectedName,
@@ -13,7 +14,7 @@ function SinemaFilteres({
   seFavOrSin,
 }) {
   const { salonlarWievData } = useContext(GlobalContext);
-
+  const [showLoginError, setShowLoginError] = useState(false);
   const sehirData = Array.from(
     new Set(salonlarWievData.map((item) => item.name))
   );
@@ -36,7 +37,12 @@ function SinemaFilteres({
         zIndexx={10}
       />
       <SinemaSearching setSearchTerm={setSearchTerm} />
-      <SinemaSort setSortOrder={setSortOrder} seFavOrSin={seFavOrSin} />
+      <SinemaSort
+        setSortOrder={setSortOrder}
+        seFavOrSin={seFavOrSin}
+        setFavoriUye={setShowLoginError}
+      />
+     {showLoginError && <LoginError onClose={() => setShowLoginError(false)} />}
     </div>
   );
 }
