@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./TicketStep.css";
 import { GrEdit } from "react-icons/gr";
 import { MdOutlineDone } from "react-icons/md";
+import { GlobalContext } from "../../Context";
 
 function TicketStep({
   num,
@@ -12,7 +13,8 @@ function TicketStep({
   handleGeri,
   contextActive,
 }) {
-  console.log(num);
+  const { selectedTicketFilm, selectedTicketSinema, selectedTicketData } =
+    useContext(GlobalContext);
 
   return (
     <div className="ticketStep">
@@ -34,7 +36,18 @@ function TicketStep({
         )}
       </div>
       <div className="step-context">
-        {stepNum > 1 && contextActive === 1 && "murad"}
+        {stepNum > 1 && contextActive === 1 && (
+          <>
+            <div className="step-contextHead">
+              <p>{selectedTicketFilm?.original_title}</p>
+              <span>{selectedTicketFilm?.title}</span>
+            </div>
+            <div className="step-contextFooter">
+              <p>{selectedTicketSinema?.name}</p>
+              <span>{`${selectedTicketData?.name} - ${selectedTicketData?.secilmisData}`}</span>
+            </div>
+          </>
+        )}
         {stepNum > 2 && contextActive === 2 && "islam"}
         {stepNum > 3 && contextActive === 3 && "habil"}
         {stepNum > 4 && contextActive === 4 && "leyla"}

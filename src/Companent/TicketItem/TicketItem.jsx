@@ -7,24 +7,16 @@ function TicketItem({
   data,
   TicketTitle,
   TicketCardComponent,
-  filteres,
+
   sort,
   handleTicketFav,
   handleChangeTicket,
   dataBiletChange,
   noneMehsul,
-  handleAddTicketFilm,
-  handleAddTicketSinema,
-  handleAddTicketData,
-  selectedTicketFilm,
-  selectedTicketSinema,
-  selectedTicketData,
+  handleTicketFilm,
+  handleAddBiletSinema,
+  handleTicketData,
 }) {
-  const { sehirData, unvanData } = useContext(GlobalContext);
-  function handleSelection(deyer) {
-    console.log(deyer);
-  }
-
   return (
     <div className="ticketItem">
       <div className="ticketItemTitle">
@@ -46,22 +38,6 @@ function TicketItem({
           </span>
         </div>
       )}
-      {filteres && (
-        <div className="ticketFilters">
-          <SinemaChooose
-            filterHeaderText={"Şehir seç"}
-            data={sehirData}
-            handleSelection={handleSelection}
-            zIndexx={12}
-          />
-          <SinemaChooose
-            filterHeaderText={"Ayrıcalıklı salon seç"}
-            data={unvanData}
-            handleSelection={handleSelection}
-            zIndexx={11}
-          />
-        </div>
-      )}
 
       <div className="ticketItems">
         {Array.isArray(data) && data.length > 0 ? (
@@ -70,12 +46,9 @@ function TicketItem({
               key={item.id}
               item={item}
               handleTicketFav={handleTicketFav}
-              onclick={handleAddTicketFilm}
-              handleAddTicketSinema={handleAddTicketSinema}
-              handleAddTicketData={handleAddTicketData}
-              selectedTicketFilm={selectedTicketFilm}
-              selectedTicketSinema={selectedTicketSinema}
-              selectedTicketData={selectedTicketData}
+              handleTicketFilm={handleTicketFilm}
+              handleAddBiletSinema={handleAddBiletSinema}
+              handleTicketData={handleTicketData}
             />
           ))
         ) : (

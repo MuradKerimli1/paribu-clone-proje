@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./TicketSteps.css";
 import TicketStep from "../TicketStep/TicketStep";
 import TicketPrev from "../TicketPrev/TicketPrev";
+import { GlobalContext } from "../../Context";
 
 function TicketSteps({ stepNum, setStepNum }) {
+  const { selectedTicketFilm, selectedTicketSinema, selectedTicketData } =
+    useContext(GlobalContext);
+  const firstPageBtn =
+    selectedTicketFilm !== null &&
+    selectedTicketSinema !== null &&
+    selectedTicketData !== null;
+
   function handlePrev() {
     if (stepNum <= 4) {
       setStepNum(stepNum + 1);
@@ -55,7 +63,10 @@ function TicketSteps({ stepNum, setStepNum }) {
         />
       </div>
       <div className="ticketPrev">
-        <TicketPrev handlePrev={handlePrev} />
+        <TicketPrev
+          isDisable={stepNum === 1 && firstPageBtn}
+          handlePrev={handlePrev}
+        />
       </div>
     </div>
   );

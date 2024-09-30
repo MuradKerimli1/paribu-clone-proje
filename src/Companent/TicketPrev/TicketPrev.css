@@ -1,25 +1,28 @@
-.ticketPrev{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
+.ticketPrev {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
 }
-.ticketPrev p{
-    font-size: 14px;
-    color: #fff;
-    font-weight: 500;
-    line-height: 17px;
+.ticketPrev p {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 17px;
 }
-.ticketPrev button{
-    width: 134px;
-    height: 42px;
-    border-radius: 25px;
-    white-space: nowrap;
-    /* background: rgba(255, 255, 255, 0.1); */
-    background: #96a825;
-    font-weight: 600;
-    font-size: 16px;
-    text-align: center;
-    /* color: rgba(255, 255, 255, 0.3); */
-    color: white;
+.ticketPrev button {
+  width: 134px;
+  height: 42px;
+  border-radius: 25px;
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.3);
 }
+.ticketBtnActive {
+  background: #96a825 !important;
+  color: white !important;
+}
+

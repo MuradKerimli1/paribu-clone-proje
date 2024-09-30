@@ -3,10 +3,15 @@ import "./SecondSinemaItem.css";
 import { LuHeart } from "react-icons/lu";
 import { GlobalContext } from "../../Context";
 
-function SecondSinemaItem({ item, handleTicketFav }) {
-  const { sinemaSecondFavorite } = useContext(GlobalContext);
+function SecondSinemaItem({ item, handleTicketFav, handleAddBiletSinema }) {
+  const { sinemaSecondFavorite, selectedTicketSinema } =
+    useContext(GlobalContext);
+  const activeTicketSinema = selectedTicketSinema?.id === item.id;
   return (
-    <div className="sinemaCard">
+    <div
+      className={`sinemaCard ${activeTicketSinema ? "activeTicketSinema" : ""}`}
+      onClick={() => handleAddBiletSinema(item.id)}
+    >
       <div className="sineCardText">
         <p>{item.name}</p>
         <span>{item.description}</span>

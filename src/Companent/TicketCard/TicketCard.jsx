@@ -3,10 +3,14 @@ import "./TicketCard.css";
 import { GlobalContext } from "../../Context";
 import { FaRegHeart } from "react-icons/fa6";
 
-function TicketCard({ item, handleTicketFav }) {
-  const { filmFavorite } = useContext(GlobalContext);
+function TicketCard({ item, handleTicketFav, handleTicketFilm }) {
+  const { filmFavorite, selectedTicketFilm } = useContext(GlobalContext);
+  const activeTicketFilm = selectedTicketFilm?.id === item.id;
   return (
-    <div className="ticketCard">
+    <div
+      className={`ticketCard ${activeTicketFilm ? "ticketactive" : ""}`}
+      onClick={() => handleTicketFilm(item.id)}
+    >
       <div className="ticketHead">
         <div className="ticketImg">
           <img

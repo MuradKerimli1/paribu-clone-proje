@@ -1,24 +1,23 @@
 .ticketSelect {
   display: flex;
-  flex-wrap: wrap;
   gap: 25px;
   padding: 25px 0;
 }
-.leftTicketSelect{
-    display: flex;
-    height: 100%;
-    flex-wrap: wrap;
+.leftTicketSelect {
+  display: flex;
+  height: 100%;
 }
-.reverseItems{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #96a825;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+.reverseItems {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #96a825;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
-.leftTicketSelect.return{
-    flex-direction: row-reverse;
+.leftTicketSelect.return {
+  flex-direction: row-reverse;
 }
+

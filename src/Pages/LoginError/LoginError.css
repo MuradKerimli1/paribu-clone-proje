@@ -71,11 +71,11 @@
 
 @media (max-width: 600px) {
   .loginErrorContext {
-    width: 90% !important;
+    width: 88% !important;
     margin: 0 auto !important;
   }
   .cgVVBanner {
     width: 100%;
-    height: 200px;
+    height: 125px;
   }
 }

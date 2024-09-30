@@ -399,6 +399,57 @@ const dateTicket = [
     Hours: ["15:00", "21:00"],
   },
 ];
+const ticketArray = [
+  {
+    id: "0",
+    image: "/Images/Icon color.svg",
+    name: "GOLD CLASS",
+    price: "210",
+  },
+  {
+    id: "1",
+    image: "/Images/Icon color.svg",
+    name: "GOLD CLASS ÖĞRENCİ",
+    price: "190",
+  },
+];
+const bufeArray = [
+  {
+    id: "0",
+    image: "/Images/Tek Icecekli Buyuk Menu.jpg",
+    name: "Tek Icecekli Buyuk Menu",
+    price: "140",
+    oldprice: "175",
+  },
+  {
+    id: "1",
+    image: "/Images/Tek Icecekli Buyuk Menu.jpg",
+    name: "Extra Menu Tek Icecekli",
+    price: "148",
+    oldprice: "185",
+  },
+  {
+    id: "3",
+    image: "/Images/Tek Icecekli Buyuk Menu.jpg",
+    name: "Kova Menu Tek Icecekli",
+    price: "156",
+    oldprice: "195",
+  },
+  {
+    id: "4",
+    image: "/Images/cocuk-menu.jpg",
+    name: "Cocuk Menu",
+    price: "172",
+    oldprice: "215",
+  },
+  {
+    id: "5",
+    image: "/Images/Tek Icecekli Buyuk Menu.jpg",
+    name: "Extra Buyuk Menu",
+    price: "216",
+    oldprice: "270",
+  },
+];
 
 const api_key = "ac595eedf5d201e225490c530c3ca47d";
 export const GlobalProvider = ({ children }) => {
@@ -534,6 +585,9 @@ export const GlobalProvider = ({ children }) => {
         setSelectedTicketSinema,
         selectedTicketData,
         setSelectedTicketData,
+        ticketArray,
+        bufeArray
+        
       }}
     >
       {children}

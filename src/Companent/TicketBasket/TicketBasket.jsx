@@ -1,11 +1,7 @@
-import React from 'react'
-import './TicketBasket.css'
+import React from "react";
+import "./TicketBasket.css";
 function TicketBasket() {
-  return (
-    <div className='ticketBasket'>
-      <h3>ticketBasket</h3>
-    </div>
-  )
+  return <div className="ticketBasket"></div>;
 }
 
-export default TicketBasket
+export default TicketBasket;

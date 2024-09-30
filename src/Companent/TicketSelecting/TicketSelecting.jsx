@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./TicketSelecting.css";
 import TicketItem from "../TicketItem/TicketItem";
 import { GlobalContext } from "../../Context";
@@ -17,6 +17,9 @@ function TicketSelecting() {
     sinemaSecondFavorite,
     setSinemaSecondFavorite,
     handleTicketFav,
+    setSelectedTicketFilm,
+    setSelectedTicketSinema,
+    setSelectedTicketData,
   } = useContext(GlobalContext);
   const [returnItems, setReturnItems] = useState(false);
 
@@ -31,6 +34,24 @@ function TicketSelecting() {
   function handleChangeSinemaTicket(Yazi) {
     setSinemaBiletChange(Yazi);
   }
+
+  function handleTicketFilm(itemId) {
+    const selectedTicketFilmConst = movieData.find(
+      (film) => film.id === itemId
+    );
+    setSelectedTicketFilm(selectedTicketFilmConst);
+  }
+  function handleAddBiletSinema(itemSecondId) {
+    const selectedTicketSinemaConst = data.find(
+      (sinema) => sinema.id === itemSecondId
+    );
+    setSelectedTicketSinema(selectedTicketSinemaConst);
+  }
+  function handleTicketData(item, btn) {
+    const newDate = { ...item, secilmisData: btn };
+    setSelectedTicketData(newDate);
+  }
+
   if (movieData.length === 0) {
     return <Loading />;
   }
@@ -50,6 +71,7 @@ function TicketSelecting() {
           handleChangeTicket={handleChangeFilmTicket}
           dataBiletChange={filmBiletChange}
           noneMehsul="Film"
+          handleTicketFilm={handleTicketFilm}
         />
         <div
           className="reverseItems"
@@ -78,6 +100,7 @@ function TicketSelecting() {
           handleChangeTicket={handleChangeSinemaTicket}
           dataBiletChange={sinemaBiletChange}
           noneMehsul="Film"
+          handleAddBiletSinema={handleAddBiletSinema}
         />
       </div>
       <TicketItem
@@ -86,6 +109,7 @@ function TicketSelecting() {
         sort={false}
         TicketCardComponent={DateCart}
         filteres={false}
+        handleTicketData={handleTicketData}
       />
     </div>
   );
