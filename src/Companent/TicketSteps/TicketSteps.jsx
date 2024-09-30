@@ -5,7 +5,7 @@ import TicketPrev from "../TicketPrev/TicketPrev";
 
 function TicketSteps({ stepNum, setStepNum }) {
   function handlePrev() {
-    if (stepNum < 4) {
+    if (stepNum <= 4) {
       setStepNum(stepNum + 1);
     }
   }
@@ -19,31 +19,39 @@ function TicketSteps({ stepNum, setStepNum }) {
       <div className="tickets">
         <TicketStep
           num={1}
+          stepNum={stepNum}
           stepText={"Seans Seç"}
           isActive={stepNum === 1}
           isCompleted={stepNum > 1}
           handleGeri={() => handleGeri(1)}
+          contextActive={1}
         />
         <TicketStep
           num={2}
+          stepNum={stepNum}
           stepText={"Bilet Tipi"}
           isActive={stepNum === 2}
           isCompleted={stepNum > 2}
           handleGeri={() => handleGeri(2)}
+          contextActive={2}
         />
         <TicketStep
           num={3}
+          stepNum={stepNum}
           stepText={"Koltuk Seçimi"}
           isActive={stepNum === 3}
           isCompleted={stepNum > 3}
           handleGeri={() => handleGeri(3)}
+          contextActive={3}
         />
         <TicketStep
           num={4}
+          stepNum={stepNum}
           stepText={"Ödeme"}
           isActive={stepNum === 4}
           isCompleted={stepNum > 4}
           handleGeri={() => handleGeri(4)}
+          contextActive={4}
         />
       </div>
       <div className="ticketPrev">

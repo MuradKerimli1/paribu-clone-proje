@@ -1,0 +1,44 @@
+.ticketItem {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  min-height: 500px;
+  height: 100%;
+  margin-bottom: 30px;
+  min-width: 300px;
+  max-width: 400px;
+}
+.ticketItemTitle p {
+  font: 600 20px "Proxima";
+  color: white;
+}
+.ticketItemNav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 0;
+}
+.ticketItemNav span {
+  font: 600 15px "Proxima";
+  color: white;
+  cursor: pointer;
+}
+.ticketItemNav span.active {
+  text-decoration: underline;
+}
+.ticketItems {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  padding-top: 15px;
+}
+.errorTitle {
+  font: 600 20px "Proxima";
+  color: red;
+}
+.ticketFilters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

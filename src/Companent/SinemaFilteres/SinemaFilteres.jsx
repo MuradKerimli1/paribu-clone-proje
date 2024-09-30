@@ -13,14 +13,9 @@ function SinemaFilteres({
   setSortOrder,
   seFavOrSin,
 }) {
-  const { salonlarWievData } = useContext(GlobalContext);
+  const { salonlarWievData,sehirData,unvanData} = useContext(GlobalContext);
   const [showLoginError, setShowLoginError] = useState(false);
-  const sehirData = Array.from(
-    new Set(salonlarWievData.map((item) => item.name))
-  );
-  const unvanData = Array.from(
-    new Set(salonlarWievData.map((item) => item.unvan))
-  );
+
 
   return (
     <div className="sinemaFilteres">

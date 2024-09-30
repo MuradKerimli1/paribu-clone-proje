@@ -1,0 +1,122 @@
+.ticketCard {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  gap: 5px;
+  background-color: #fff;
+}
+.ticketHead {
+  display: flex;
+  gap: 10px;
+}
+.ticketImg img {
+  height: 105px;
+  width: 100px;
+  border-radius: 16px;
+}
+.ticketName {
+  width: 100%;
+}
+.ticketName p {
+  font: 600 13px "Proxima";
+  color: black;
+}
+.ticketName span {
+  font: 600 12px "Proxima";
+  color: black;
+  opacity: 0.8;
+}
+.ticketContext {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.ticketDate {
+  display: flex;
+  flex-direction: column;
+}
+.ticketDate p {
+  font: 500 12px "Proxima";
+  color: black;
+}
+.ticketDate span {
+  font: 500 11px "Proxima";
+  color: black;
+}
+.ticketImgs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ticketImgs img {
+  width: 55px;
+  height: 23px;
+  object-fit: fill !important;
+  background-color: #f5f6f8;
+  border-radius: 25px;
+  padding: 5px;
+  cursor: pointer;
+}
+.ticketImgs span {
+  background-color: #f5f6f8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+}
+.ticketvote {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.voteContext {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font: 600 13px "Proxima";
+  margin-top: 10px;
+}
+.voteContext img {
+  width: 26px;
+  height: 23px;
+  object-fit: contain;
+}
+.voteImages {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.voteImages img {
+  width: 18px;
+  height: 20px;
+}
+.ticketFavorite {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  z-index: 2;
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.favActive {
+  color: red;
+}
+.ticketactive{
+  background: #98A726;
+}

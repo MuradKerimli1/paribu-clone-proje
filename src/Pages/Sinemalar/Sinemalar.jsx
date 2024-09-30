@@ -7,7 +7,7 @@ import SinemaItems from "../../Companent/SinemaItems/SinemaItems";
 import SinemaFilteres from "../../Companent/SinemaFilteres/SinemaFilteres";
 
 function Sinemalar() {
-  const { salonlarWievData } = useContext(GlobalContext);
+  const { salonlarWievData, handleTicketFav } = useContext(GlobalContext);
   const [globalSinema, setGlobalSinema] = useState(salonlarWievData);
   const [selectedName, setSelectedName] = useState("");
   const [selectedTitle, setSelectedTitle] = useState("");
@@ -62,14 +62,6 @@ function Sinemalar() {
     setGlobalSinema(favOrSin === "sinema" ? sortedSinema : sortedFavorites);
   }
 
-  const toggleFavorite = (item) => {
-    if (favorites.some((fav) => fav.id === item.id)) {
-      setFavorites((prev) => prev.filter((fav) => fav.id !== item.id));
-    } else {
-      setFavorites((prev) => [...prev, item]);
-    }
-  };
-
   return (
     <div className="sinemalar">
       <FilmHeader filmContext={"Sinema Salonları"} />
@@ -85,7 +77,14 @@ function Sinemalar() {
           />
           <SinemaItems
             globalSalonn={globalSinema}
-            toggleFavorite={toggleFavorite}
+            toggleFavorite={(deyerThree) =>
+              handleTicketFav(
+                deyerThree,
+                salonlarWievData,
+                favorites,
+                setFavorites
+              )
+            }
             favorites={favorites}
           />
         </div>

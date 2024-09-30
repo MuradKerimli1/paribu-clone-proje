@@ -387,6 +387,19 @@ const data = [
     url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42175.11516864165!2d77.2077035!3d28.612961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce399dbaaba3f%3A0x36b6e41678d48f26!2sDelhi%2C%20India!5e0!3m2!1sen!2sin!4v1685362467405!5m2!1sen!2sin",
   },
 ];
+const dateTicket = [
+  {
+    id: 0,
+    name: "2D - ALTY",
+    Hours: ["11:00", "12:00", "14:00", "17:00", "18:00"],
+  },
+  {
+    id: 1,
+    name: "2D - DUB",
+    Hours: ["15:00", "21:00"],
+  },
+];
+
 const api_key = "ac595eedf5d201e225490c530c3ca47d";
 export const GlobalProvider = ({ children }) => {
   const [movieData, setMovieData] = useState([]);
@@ -408,6 +421,13 @@ export const GlobalProvider = ({ children }) => {
     movieData && Array.isArray(movieData) ? movieData.slice(0, 10) : [];
   const yakindaMovies =
     movieData && Array.isArray(movieData) ? movieData.slice(10, 20) : [];
+  const [filmFavorite, setFilmFavorite] = useState([]);
+  const [sinemaSecondFavorite, setSinemaSecondFavorite] = useState([]);
+  const [selectedTicketFilm, setSelectedTicketFilm] = useState(null);
+  const [selectedTicketSinema, setSelectedTicketSinema] = useState(null);
+  const [selectedTicketData, setSelectedTicketData] = useState(null);
+
+  // fetch
 
   const fetchMovies = async () => {
     try {
@@ -441,6 +461,12 @@ export const GlobalProvider = ({ children }) => {
   }, []);
 
   // fetch
+  const sehirData = Array.from(
+    new Set(salonlarWievData.map((item) => item.name))
+  );
+  const unvanData = Array.from(
+    new Set(salonlarWievData.map((item) => item.unvan))
+  );
 
   const addToFavorites = (item) => {
     setFavorites((prev) => [...prev, item]);
@@ -459,17 +485,30 @@ export const GlobalProvider = ({ children }) => {
   const removeFromFavorites = (itemId) => {
     setFavorites((prev) => prev.filter((item) => item.id !== itemId));
   };
+  //own favorite
+  function handleTicketFav(deyer, MainData, filmArray, setFilmArray) {
+    if (filmArray?.some((film) => film.id === deyer)) {
+      const updatedFavorites = filmArray.filter((film) => film.id !== deyer);
+      setFilmArray(updatedFavorites);
+    } else {
+      const selectedFilmFavorite = MainData.find((item) => item.id === deyer);
+      setFilmArray((prev) => [...prev, selectedFilmFavorite]);
+    }
+  }
 
   return (
     <GlobalContext.Provider
       value={{
         movieData,
         fetchVideos,
+        data,
         videos,
         homeSliderData,
         vizyonMovies,
         yakindaMovies,
         SecondCompanyData,
+        sehirData,
+        unvanData,
         salonlarWievData,
         setSalonlarWievData,
         companyData,
@@ -483,6 +522,18 @@ export const GlobalProvider = ({ children }) => {
         setGlobalPersons,
         accauntPerson,
         setAccauntPerson,
+        dateTicket,
+        filmFavorite,
+        setFilmFavorite,
+        handleTicketFav,
+        sinemaSecondFavorite,
+        setSinemaSecondFavorite,
+        selectedTicketFilm,
+        setSelectedTicketFilm,
+        selectedTicketSinema,
+        setSelectedTicketSinema,
+        selectedTicketData,
+        setSelectedTicketData,
       }}
     >
       {children}

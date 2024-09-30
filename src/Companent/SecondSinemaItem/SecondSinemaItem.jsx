@@ -1,8 +1,10 @@
-import React from "react";
-import "./SinemaItem.css";
+import React, { useContext } from "react";
+import "./SecondSinemaItem.css";
 import { LuHeart } from "react-icons/lu";
+import { GlobalContext } from "../../Context";
 
-function SinemaItem({ item, toggleFavorite, isFavorited }) {
+function SecondSinemaItem({ item, handleTicketFav }) {
+  const { sinemaSecondFavorite } = useContext(GlobalContext);
   return (
     <div className="sinemaCard">
       <div className="sineCardText">
@@ -11,8 +13,12 @@ function SinemaItem({ item, toggleFavorite, isFavorited }) {
       </div>
       <div className="sineCardIcon">
         <span
-          onClick={() => toggleFavorite(item.id)}
-          className={isFavorited ? "favActive" : ""}
+          onClick={() => handleTicketFav(item.id)}
+          className={`${
+            sinemaSecondFavorite.some((filme) => filme.id == item.id)
+              ? "favActive"
+              : ""
+          }`}
         >
           <LuHeart />
         </span>
@@ -28,4 +34,4 @@ function SinemaItem({ item, toggleFavorite, isFavorited }) {
   );
 }
 
-export default SinemaItem;
+export default SecondSinemaItem;

@@ -1,0 +1,44 @@
+.DateCart {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 16px 20px;
+  border-radius: 10px;
+  min-height: 152px;
+  height: auto;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.DateCart p{
+    font: 600 17px 'Proxima';
+    color: black;
+}
+.dateBtns{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+.dateBtns span{
+    background: #f2f2f2;
+    border-radius: 999px;
+    padding: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    width: 74px;
+    height: 28px;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.dateBtns span:hover{
+  background-color: #96A825;
+  color: white;
+}
+.activeBtn{
+  background: #96A825 !important;
+  color: white;
+}
