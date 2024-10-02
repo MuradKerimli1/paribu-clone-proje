@@ -5,7 +5,7 @@
 }
 .tickets {
   display: flex;
-  flex-wrap: wrap;
+
   gap: 7px;
   width: 90%;
   justify-content: space-between;
