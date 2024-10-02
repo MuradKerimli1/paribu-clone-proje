@@ -59,6 +59,14 @@
   border-left-color: #ed9f25;
   border-right-color: #ed9f25;
 }
+.premiumSeat {
+  background-color: red;
+}
+
+.premiumSeat::before {
+  border-left-color: red;
+  border-right-color: red;
+}
 
 /* Sold Seat */
 .sold {
