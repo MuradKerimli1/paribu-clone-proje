@@ -94,9 +94,9 @@
     justify-content: center;
   }
   .ticketSwiperCardLeftImg img {
-  width: 120px;
+    width: 100px;
     aspect-ratio: auto 120 / 110;
-    height: 110px;
+    height: 100px;
   }
   .ticketSwiperCardLeftText {
     display: flex;
