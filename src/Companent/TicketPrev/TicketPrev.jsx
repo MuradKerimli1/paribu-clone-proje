@@ -10,6 +10,7 @@ function TicketPrev({
   ticketPrice,
   ticketBufePrice,
   kreslo,
+  handleGeri
 }) {
   const [showSources, setShowSources] = useState(false);
 
@@ -47,16 +48,18 @@ function TicketPrev({
               Devam Et
             </button>
           </div>
-          {showSources && (
-            <div className="biletSoruces">
-              <BiletSoruces
-                ticketPrice={ticketPrice}
-                ticketBufePrice={ticketBufePrice}
-                kreslo={kreslo}
-                handleCloseSoruces={handleShowSoruces}
-              />
-            </div>
-          )}
+
+          <div className="biletSoruces">
+            <BiletSoruces
+              showSources={showSources}
+              ticketPrice={ticketPrice}
+              ticketBufePrice={ticketBufePrice}
+              kreslo={kreslo}
+              handleCloseSoruces={handleShowSoruces}
+              handleGeri={handleGeri}
+              handleShowSoruces={handleShowSoruces}
+            />
+          </div>
         </>
       )}
     </div>

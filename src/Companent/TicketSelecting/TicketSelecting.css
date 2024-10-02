@@ -1,11 +1,9 @@
 .ticketSelect {
-  display: flex;
-  gap: 25px;
-  padding: 25px 0;
-}
-.leftTicketSelect {
-  display: flex;
-  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-items: center;
+  justify-self: center;
 }
 .reverseItems {
   width: 40px;
@@ -20,12 +18,13 @@
 .leftTicketSelect.return {
   flex-direction: row-reverse;
 }
-@media(max-width:770px){
+@media (max-width: 950px) {
   .ticketSelect {
-    flex-direction: column;
-  }
-  .leftTicketSelect {
-    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
-
+@media ((min-width: 950px) and (max-width:1200px)) {
+  .ticketSelect {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

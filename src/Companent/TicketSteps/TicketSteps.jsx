@@ -86,6 +86,7 @@ function TicketSteps({
           ticketPrice={ticketPrice}
           ticketBufePrice={ticketBufePrice}
           kreslo={kreslo}
+          handleGeri={handleGeri}
         />
       </div>
     </div>

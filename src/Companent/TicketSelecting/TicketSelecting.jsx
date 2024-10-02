@@ -21,7 +21,6 @@ function TicketSelecting() {
     setSelectedTicketSinema,
     setSelectedTicketData,
   } = useContext(GlobalContext);
-  const [returnItems, setReturnItems] = useState(false);
 
   const [filmBiletChange, setFilmBiletChange] = useState("Tümü");
   const [sinemaBiletChange, setSinemaBiletChange] = useState("Tümü");
@@ -58,51 +57,45 @@ function TicketSelecting() {
 
   return (
     <div className="ticketSelect">
-      <div className={`leftTicketSelect ${returnItems ? "return" : ""}`}>
-        <TicketItem
-          data={filmBiletChange === "Tümü" ? movieData : filmFavorite}
-          TicketTitle={"Film Seçimi"}
-          TicketCardComponent={TicketCard}
-          sort={true}
-          filteres={false}
-          handleTicketFav={(deyer) =>
-            handleTicketFav(deyer, movieData, filmFavorite, setFilmFavorite)
-          }
-          handleChangeTicket={handleChangeFilmTicket}
-          dataBiletChange={filmBiletChange}
-          noneMehsul="Film"
-          handleTicketFilm={handleTicketFilm}
-        />
-        <div
-          className="reverseItems"
-          onClick={() => setReturnItems((prev) => !prev)}
-        >
-          <img src="/Images/card-change.svg" alt="return" />
-        </div>
-        <TicketItem
-          data={
-            sinemaBiletChange === "Tümü"
-              ? secondTicketSinema
-              : sinemaSecondFavorite
-          }
-          TicketTitle={"Sinema Seçimi"}
-          TicketCardComponent={SecondSinemaItem}
-          sort={true}
-          filteres={true}
-          handleTicketFav={(deyerSecond) =>
-            handleTicketFav(
-              deyerSecond,
-              data,
-              sinemaSecondFavorite,
-              setSinemaSecondFavorite
-            )
-          }
-          handleChangeTicket={handleChangeSinemaTicket}
-          dataBiletChange={sinemaBiletChange}
-          noneMehsul="Film"
-          handleAddBiletSinema={handleAddBiletSinema}
-        />
-      </div>
+      <TicketItem
+        data={filmBiletChange === "Tümü" ? movieData : filmFavorite}
+        TicketTitle={"Film Seçimi"}
+        TicketCardComponent={TicketCard}
+        sort={true}
+        filteres={false}
+        handleTicketFav={(deyer) =>
+          handleTicketFav(deyer, movieData, filmFavorite, setFilmFavorite)
+        }
+        handleChangeTicket={handleChangeFilmTicket}
+        dataBiletChange={filmBiletChange}
+        noneMehsul="Film"
+        handleTicketFilm={handleTicketFilm}
+      />
+
+      <TicketItem
+        data={
+          sinemaBiletChange === "Tümü"
+            ? secondTicketSinema
+            : sinemaSecondFavorite
+        }
+        TicketTitle={"Sinema Seçimi"}
+        TicketCardComponent={SecondSinemaItem}
+        sort={true}
+        filteres={true}
+        handleTicketFav={(deyerSecond) =>
+          handleTicketFav(
+            deyerSecond,
+            data,
+            sinemaSecondFavorite,
+            setSinemaSecondFavorite
+          )
+        }
+        handleChangeTicket={handleChangeSinemaTicket}
+        dataBiletChange={sinemaBiletChange}
+        noneMehsul="Film"
+        handleAddBiletSinema={handleAddBiletSinema}
+      />
+
       <TicketItem
         data={dateTicket}
         TicketTitle={"Tarih ve Seans Seçimi"}

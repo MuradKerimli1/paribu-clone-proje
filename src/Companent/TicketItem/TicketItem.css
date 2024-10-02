@@ -6,8 +6,7 @@
   min-height: 500px;
   height: 100%;
   margin-bottom: 30px;
-  min-width: 300px;
-  max-width: 400px;
+  width: 100%;
 }
 .ticketItemTitle p {
   font: 600 20px "Proxima";
@@ -43,3 +42,17 @@
   gap: 10px;
 }
 
+@media (max-width: 950px) {
+  .ticketItem {
+    height: 350px;
+    overflow-y: auto;
+  }
+  .ticketItem::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .ticketItem::-webkit-scrollbar-thumb {
+    background-color: #8fa203;
+    border-radius: 10px;
+  }
+}

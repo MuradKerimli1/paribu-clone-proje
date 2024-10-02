@@ -3,18 +3,35 @@ import "./BiletSoruces.css";
 import SorucesHead from "../SorucesHead/SorucesHead";
 import { GlobalContext } from "../../Context";
 
-function BiletSoruces({ ticketPrice, ticketBufePrice, kreslo,handleCloseSoruces}) {
+function BiletSoruces({
+  ticketPrice,
+  ticketBufePrice,
+  kreslo,
+  handleCloseSoruces,
+  showSources,
+  handleGeri,
+  handleShowSoruces,
+}) {
   const { selectedTicketFilm, selectedTicketSinema, selectedTicketData } =
     useContext(GlobalContext);
 
   return (
-    <div className="biletSources">
+    <div className={`biletSources ${showSources ? "activeSoruce" : ""}`}>
       <div className="biletSourcesClose">
-        <img src="/Images/close-modal (1).svg" alt="close" onClick={handleCloseSoruces} />
+        <img
+          src="/Images/close-modal (1).svg"
+          alt="close"
+          onClick={handleCloseSoruces}
+        />
       </div>
       <div className="biletSourcesChild">
         <div className="biletChildhead">
-          <SorucesHead sourcesText={"Seans Seçimi"} />
+          <SorucesHead
+            sourcesText={"Seans Seçimi"}
+            handleGeri={handleGeri}
+            num={1}
+            handleShowSoruces={handleShowSoruces}
+          />
           <div className="biletFilmSourc">
             <div className="biletFilmSorucsHead">
               <div className="biletFilmSorucsHeadLeft">
@@ -59,7 +76,12 @@ function BiletSoruces({ ticketPrice, ticketBufePrice, kreslo,handleCloseSoruces}
       </div>
       <div className="biletSourcesChild">
         <div className="biletChildhead">
-          <SorucesHead sourcesText={"Bilet ve Büfe Ürünleri"} />
+          <SorucesHead
+            sourcesText={"Bilet ve Büfe Ürünleri"}
+            handleGeri={handleGeri}
+            num={2}
+            handleShowSoruces={handleShowSoruces}
+          />
           <div className="biletChildContext">
             {ticketPrice && ticketPrice.length > 0 ? (
               ticketPrice.map((ticket) => (
@@ -70,7 +92,9 @@ function BiletSoruces({ ticketPrice, ticketBufePrice, kreslo,handleCloseSoruces}
                 </div>
               ))
             ) : (
-              <span className="ticketBos">Henüz bilet veya büfe ürünü seçmediniz</span>
+              <span className="ticketBos">
+                Henüz bilet veya büfe ürünü seçmediniz
+              </span>
             )}
             {ticketBufePrice &&
               ticketBufePrice.length > 0 &&
@@ -86,7 +110,12 @@ function BiletSoruces({ ticketPrice, ticketBufePrice, kreslo,handleCloseSoruces}
       </div>
       <div className="biletSourcesChild">
         <div className="biletChildhead">
-          <SorucesHead sourcesText={"Koltuk Seçimi"} />
+          <SorucesHead
+            sourcesText={"Koltuk Seçimi"}
+            handleGeri={handleGeri}
+            num={3}
+            handleShowSoruces={handleShowSoruces}
+          />
           <div className="biletChildContext">
             {kreslo && kreslo.length > 0 ? (
               kreslo.map((kresl) => (
