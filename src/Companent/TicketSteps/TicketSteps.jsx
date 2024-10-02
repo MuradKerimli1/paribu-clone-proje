@@ -11,6 +11,7 @@ function TicketSteps({
   ticketPrice,
   ticketBufePrice,
   kreslo,
+  finalTotalPrice
 }) {
   const { selectedTicketFilm, selectedTicketSinema, selectedTicketData } =
     useContext(GlobalContext);
@@ -35,7 +36,7 @@ function TicketSteps({
         <TicketStep
           num={1}
           stepNum={stepNum}
-          stepText={"Seans Seç"}
+          stepText={"Seans "}
           isActive={stepNum === 1}
           isCompleted={stepNum > 1}
           handleGeri={() => handleGeri(1)}
@@ -44,7 +45,7 @@ function TicketSteps({
         <TicketStep
           num={2}
           stepNum={stepNum}
-          stepText={"Bilet Tipi"}
+          stepText={"Bilet "}
           isActive={stepNum === 2}
           isCompleted={stepNum > 2}
           handleGeri={() => handleGeri(2)}
@@ -55,7 +56,7 @@ function TicketSteps({
         <TicketStep
           num={3}
           stepNum={stepNum}
-          stepText={"Koltuk Seçimi"}
+          stepText={"Koltuk"}
           isActive={stepNum === 3}
           isCompleted={stepNum > 3}
           handleGeri={() => handleGeri(3)}
@@ -74,12 +75,14 @@ function TicketSteps({
       </div>
       <div className="ticketPrev">
         <TicketPrev
+          stepNum={stepNum}
           isDisable={
             (stepNum === 1 && firstPageBtn) ||
             (stepNum === 2 && totalTicketPrice > 0) ||
             (stepNum === 3 && kreslo.length > 0)
           }
           handlePrev={handlePrev}
+          finalTotalPrice={finalTotalPrice}
         />
       </div>
     </div>

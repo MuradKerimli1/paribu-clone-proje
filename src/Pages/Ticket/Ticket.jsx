@@ -28,6 +28,7 @@ function Ticket() {
     <div className="ticketPage">
       <div className="ticketContainer containerer">
         <TicketSteps
+          finalTotalPrice={finalTotalPrice}
           stepNum={stepNum}
           setStepNum={setStepNum}
           totalTicketPrice={totalTicketPrice}
@@ -52,7 +53,12 @@ function Ticket() {
             setKreslo={setKreslo}
           />
         )}
-        {stepNum === 4 && <PayingTicket />}
+        {stepNum === 4 && (
+          <PayingTicket
+            finalTotalPrice={finalTotalPrice}
+            ticketPrice={ticketPrice}
+          />
+        )}
       </div>
     </div>
   );

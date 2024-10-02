@@ -1,0 +1,34 @@
+.payingForm {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+.payingForm p {
+  font: 600 17px "Proxima";
+  color: white;
+}
+.payingForm input {
+  width: 100%;
+  background-color: #3d4245;
+  border: none;
+  margin-top: 10px;
+  border-radius: 6.4px !important;
+  padding: 1rem;
+  color: #fff;
+  padding: 15px;
+  outline: none;
+}
+.payingFooterInp {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 770px) {
+  .payingForm {
+    max-width: 98%;
+  }
+}

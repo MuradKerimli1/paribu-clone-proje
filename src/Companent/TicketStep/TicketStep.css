@@ -60,20 +60,70 @@
 }
 .stepTwoContent {
   max-height: 100px;
-  overflow-y:auto ;
+  overflow-y: auto;
 }
-.stepTwoContent::-webkit-scrollbar{
+.stepTwoContent::-webkit-scrollbar {
   width: 5px;
   height: 5px;
   border-radius: 8px;
 }
-.stepTwoContent::-webkit-scrollbar-thumb{
-  background-color: #96A824;
+.stepTwoContent::-webkit-scrollbar-thumb {
+  background-color: #96a824;
 }
 .stepTwoContent p,
-.stepThereeBufes p{
+.stepThereeBufes p {
   font: 700 12px "Proxima";
   text-transform: capitalize;
   margin-top: 4px;
   color: white;
+}
+@media (max-width: 770px) {
+  .step-number {
+    font: 600 15px "Proxima";
+    width: 27px;
+    height: 27px;
+  }
+  .step-head {
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .step-text {
+    color: white;
+    font: 600 14px "Proxima";
+    cursor: pointer;
+  }
+
+  .step-context {
+    display: none;
+  }
+  .step-handle {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .step-head {
+    width: 78.25px;
+    height: 63px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media ((min-width: 770px) and (max-width:1000px)) {
+  .step-number {
+    font: 600 16px "Proxima";
+    width: 32px;
+    height: 32px;
+  }
+
+  .step-text {
+    color: white;
+    font: 600 18px "Proxima";
+    cursor: pointer;
+  }
 }

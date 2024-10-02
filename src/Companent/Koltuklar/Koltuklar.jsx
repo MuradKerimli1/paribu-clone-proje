@@ -3,7 +3,7 @@ import "./Koltuklar.css";
 import { MdOutlinePerson } from "react-icons/md";
 
 function Koltuklar({ seatsData, handleClickKoltuk, kreslo }) {
-  console.log(kreslo);
+  
 
   return (
     <div className="koltuklar">

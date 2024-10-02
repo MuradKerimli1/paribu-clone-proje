@@ -1,10 +1,18 @@
-.ticketStepsContainer{
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+.ticketStepsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 .tickets {
   display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
   width: 90%;
   justify-content: space-between;
+}
+
+@media (max-width: 770px) {
+  .ticketStepsContainer {
+    gap: 10px;
+  }
 }

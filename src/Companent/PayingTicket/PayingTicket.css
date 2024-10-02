@@ -1,3 +1,11 @@
-.payingTicket h2 {
-  color: white;
+.payingTicket {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  gap: 20px;
+}
+@media (max-width: 770px) {
+  .payingTicket {
+    flex-direction: column-reverse;
+  }
 }

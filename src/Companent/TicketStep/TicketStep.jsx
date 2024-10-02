@@ -18,7 +18,6 @@ function TicketStep({
 }) {
   const { selectedTicketFilm, selectedTicketSinema, selectedTicketData } =
     useContext(GlobalContext);
-  console.log(kreslo);
 
   return (
     <div className="ticketStep">

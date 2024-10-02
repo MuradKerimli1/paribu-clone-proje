@@ -5,7 +5,7 @@
   justify-content: space-between;
 }
 .ticketPrev p {
-  font-size: 14px;
+  font-size: 13px;
   color: #fff;
   font-weight: 500;
   line-height: 17px;
@@ -25,4 +25,45 @@
   background: #96a825 !important;
   color: white !important;
 }
-
+.toplamDiv {
+  display: none;
+  background: #404040 !important;
+}
+.biletSoruces {
+  display: none;
+}
+@media (max-width: 770px) {
+  .prevBtns {
+    bottom: 0;
+    z-index: 50;
+    position: fixed;
+    background-color: #404040;
+    display: flex;
+    padding: 0;
+    left: 0;
+    width: 100%;
+  }
+  .ticketPrev p {
+    display: none;
+  }
+  .toplamDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+  }
+  .toplamDiv strong span{
+    color: white;
+  }
+  .toplamDiv strong{
+    font-size: 13px;
+  }
+  .biletSoruces {
+    display: inline-block;
+  }
+  .prevBtns button {
+    width: 100%;
+    border-radius: 0;
+    height: 45px;
+  }
+}
