@@ -4,7 +4,14 @@ import TicketStep from "../TicketStep/TicketStep";
 import TicketPrev from "../TicketPrev/TicketPrev";
 import { GlobalContext } from "../../Context";
 
-function TicketSteps({ stepNum, setStepNum }) {
+function TicketSteps({
+  stepNum,
+  setStepNum,
+  totalTicketPrice,
+  ticketPrice,
+  ticketBufePrice,
+  kreslo,
+}) {
   const { selectedTicketFilm, selectedTicketSinema, selectedTicketData } =
     useContext(GlobalContext);
   const firstPageBtn =
@@ -42,6 +49,8 @@ function TicketSteps({ stepNum, setStepNum }) {
           isCompleted={stepNum > 2}
           handleGeri={() => handleGeri(2)}
           contextActive={2}
+          ticketPrice={ticketPrice}
+          ticketBufePrice={ticketBufePrice}
         />
         <TicketStep
           num={3}
@@ -51,6 +60,7 @@ function TicketSteps({ stepNum, setStepNum }) {
           isCompleted={stepNum > 3}
           handleGeri={() => handleGeri(3)}
           contextActive={3}
+          kreslo={kreslo}
         />
         <TicketStep
           num={4}
@@ -64,7 +74,11 @@ function TicketSteps({ stepNum, setStepNum }) {
       </div>
       <div className="ticketPrev">
         <TicketPrev
-          isDisable={stepNum === 1 && firstPageBtn}
+          isDisable={
+            (stepNum === 1 && firstPageBtn) ||
+            (stepNum === 2 && totalTicketPrice > 0) ||
+            (stepNum === 3 && kreslo.length > 0)
+          }
           handlePrev={handlePrev}
         />
       </div>

@@ -1,0 +1,113 @@
+.ticketTypeCard {
+  background-color: #fff;
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.ticketTypeCardLeft {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.TicketCardLeftHead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.TicketCardLeftHead img {
+  width: 40px;
+  height: 40px;
+  background-color: #efefef;
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+.TicketCardLeftHead p {
+  font: 600 17px "Proxima";
+  color: black;
+}
+.ticketCardNickName {
+  display: none;
+}
+.ticketPriceLEft {
+  color: #96a825;
+  font: 600 20px "Proxima";
+  white-space: nowrap;
+}
+.ticketTypeCardRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ticketTypeCardRight button {
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  font: 600 18px "Proxima";
+}
+.ticketTypeCardRight span {
+  font: 600 14px "Proxima";
+  color: black;
+}
+.ticketTypeCardRight img {
+  width: 20px;
+  aspect-ratio: auto 20 / 20;
+  height: 20px;
+}
+@media (max-width: 770px) {
+  .ticketTypeCardLeft {
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .TicketCardLeftHead img {
+    width: 30px;
+    height: 30px;
+  }
+  .TicketCardLeftHead p {
+    font: 600 15px "Proxima";
+  }
+  .ticketCardNickName {
+    display: inline-block;
+  }
+  .ticketCardRealName {
+    display: none;
+  }
+  .ticketPriceLEft {
+    font: 600 17px "Proxima";
+  }
+  .ticketTypeCardRight {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .ticketTypeCardRight button {
+    width: 34px;
+    height: 34px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    font: 600 18px "Proxima";
+  }
+  .ticketTypeCardRight span {
+    font: 600 13px "Proxima";
+    color: black;
+  }
+  .ticketTypeCardRight img {
+    width: 18px;
+    aspect-ratio: auto 18 / 18;
+    height: 18px;
+  }
+}

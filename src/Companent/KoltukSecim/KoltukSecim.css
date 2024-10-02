@@ -1,3 +1,71 @@
-.koltukSecim h2{
-    color: white;
+.koltukSecim {
+  padding: 20px;
+  background-color: #292929;
+  border: 2px solid #3e3e3e;
+  border-radius: 16px;
+  padding-bottom: 2rem;
+  padding-top: 30px;
+}
+
+.koltukContainer {
+  background: #fff;
+  border-radius: 16px;
+  overflow-x: auto; /* Ensure overflow is set here */
+  width: 100%; /* Prevent the container from exceeding its parent */
+}
+
+.koltukContexte {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  padding: 30px;
+  width: 70% !important;
+  margin: 0 auto !important;
+}
+
+.koltuk-head {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.koltukContext {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  height: 100%;
+}
+
+.koltukRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Add this class to control the width of the rows */
+.koltukRow {
+  flex-shrink: 0; /* Prevent the row from shrinking */
+  min-width: 200px; /* Set a minimum width for each row item */
+}
+
+@media (max-width: 770px) {
+  .koltukSecim {
+    padding: 15px;
+    padding-top: 25px;
+  }
+  .koltukContainer {
+    overflow-x: auto;
+  }
+
+  .koltukContexte {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
 }

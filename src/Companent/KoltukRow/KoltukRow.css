@@ -1,0 +1,17 @@
+.rows {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    height: auto; 
+  }
+  .rows span {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 13px;
+    text-align: center;
+    line-height: 21px;
+    color: #bdbdbd;
+    font: 600 14px 'Proxima';
+  }
+  

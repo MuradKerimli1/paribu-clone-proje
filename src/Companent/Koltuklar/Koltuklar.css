@@ -1,0 +1,68 @@
+.koltuklarContainer {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 15px;
+}
+
+/* Base seat styling */
+.seatKres {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 18px;
+  margin-bottom: 3px;
+  position: relative;
+  text-align: center;
+  background: #7b7b7b;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+/* Normal Seat Style */
+.seatKres {
+  background-color: #96a825;
+}
+.seatKres::before {
+  content: "";
+  height: 3px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 1px;
+  right: 1px;
+  background: white;
+  border-left: 4px solid #96a825; /* Normal seat border */
+  border-right: 4px solid #96a825;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Premium Seat */
+
+/* Business Seat */
+.businessSeat {
+  background-color: #ed9f25;
+}
+.businessSeat::before {
+  border-left-color: #ed9f25;
+  border-right-color: #ed9f25;
+}
+
+/* Sold Seat */
+.sold {
+  background-color: #cfcfcf;
+}
+.sold::before {
+  border-left-color: #cfcfcf;
+  border-right-color: #cfcfcf;
+}
+
+/* Occupied person icon */
+.activePerson {
+  font-size: 10px;
+  color: white;
+}

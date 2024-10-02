@@ -404,33 +404,35 @@ const ticketArray = [
     id: "0",
     image: "/Images/Icon color.svg",
     name: "GOLD CLASS",
+    nickname: "Tam",
     price: "210",
   },
   {
     id: "1",
     image: "/Images/Icon color.svg",
     name: "GOLD CLASS ÖĞRENCİ",
+    nickname: "OGRENCI",
     price: "190",
   },
 ];
 const bufeArray = [
   {
     id: "0",
-    image: "/Images/Tek Icecekli Buyuk Menu.jpg",
+    image: "/Images/tek-icecekli-buyuk-menu.jpg",
     name: "Tek Icecekli Buyuk Menu",
     price: "140",
     oldprice: "175",
   },
   {
     id: "1",
-    image: "/Images/Tek Icecekli Buyuk Menu.jpg",
+    image: "/Images/tek-icecekli-buyuk-menu.jpg",
     name: "Extra Menu Tek Icecekli",
     price: "148",
     oldprice: "185",
   },
   {
     id: "3",
-    image: "/Images/Tek Icecekli Buyuk Menu.jpg",
+    image: "/Images/tek-icecekli-buyuk-menu.jpg",
     name: "Kova Menu Tek Icecekli",
     price: "156",
     oldprice: "195",
@@ -444,10 +446,24 @@ const bufeArray = [
   },
   {
     id: "5",
-    image: "/Images/Tek Icecekli Buyuk Menu.jpg",
+    image: "/Images/tek-icecekli-buyuk-menu.jpg",
     name: "Extra Buyuk Menu",
     price: "216",
     oldprice: "270",
+  },
+  {
+    id: "6",
+    image: "/Images/kova-menu-3-icecekli.jpg",
+    name: "Kova Menu 170Oz 3 Icecekli",
+    price: "304",
+    oldprice: "380",
+  },
+  {
+    id: "7",
+    image: "/Images/kova-menu.jpg",
+    name: "Kova Menu 170Oz 2 Icecekli",
+    price: "236",
+    oldprice: "294",
   },
 ];
 
@@ -546,6 +562,45 @@ export const GlobalProvider = ({ children }) => {
       setFilmArray((prev) => [...prev, selectedFilmFavorite]);
     }
   }
+  const seatsData = [];
+
+  const seatTypes = {
+    normal: "normal",
+    handicapped: "handicapped",
+    premium: "premium",
+    business: "business",
+  };
+
+  for (let row = "A".charCodeAt(0); row <= "G".charCodeAt(0); row++) {
+    for (let seatNumber = 1; seatNumber <= 8; seatNumber++) {
+      let type;
+      if (
+        seatNumber === 1 &&
+        (row === "C".charCodeAt(0) || row === "D".charCodeAt(0))
+      ) {
+        type = seatTypes.handicapped;
+      } else if (seatNumber <= 2) {
+        type = seatTypes.premium;
+      } else if (seatNumber <= 4) {
+        type = seatTypes.business;
+      } else {
+        type = seatTypes.normal;
+      }
+
+      // Generate a unique ID by combining the row, seat number, and a random value
+      const id = `seat-${String.fromCharCode(row)}${seatNumber}-${Math.random()
+        .toString(36)
+        .substr(2, 9)}`;
+
+      seatsData.push({
+        id: id, // Unique ID
+        row: String.fromCharCode(row),
+        seatNumber: seatNumber,
+        type: type,
+        occupied: Math.random() < 0.3, // Random occupied status
+      });
+    }
+  }
 
   return (
     <GlobalContext.Provider
@@ -586,8 +641,8 @@ export const GlobalProvider = ({ children }) => {
         selectedTicketData,
         setSelectedTicketData,
         ticketArray,
-        bufeArray
-        
+        bufeArray,
+        seatsData,
       }}
     >
       {children}

@@ -1,0 +1,56 @@
+.ticketSwiper {
+  padding: 30px 0;
+}
+.ticketSwiperHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+.ticketSwiper p {
+  font: 600 20px "Proxima";
+  color: white;
+}
+.prevs {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.prevs img {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+.ticketGeri {
+  transform: rotate(180deg);
+}
+.ticketSwiperjs{
+    background-color: white;
+    padding: 15px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 770px) {
+  .ticketSwiper {
+    padding: 25px 0;
+  }
+  .ticketSwiperHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+  }
+  .ticketSwiper p {
+    font: 600 16px "Proxima";
+    color: white;
+  }
+  .prevs {
+    display: none;
+  }
+
+  .ticketGeri {
+    transform: rotate(180deg);
+  }
+}

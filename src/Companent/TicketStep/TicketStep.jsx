@@ -12,9 +12,13 @@ function TicketStep({
   isCompleted,
   handleGeri,
   contextActive,
+  ticketPrice,
+  ticketBufePrice,
+  kreslo,
 }) {
   const { selectedTicketFilm, selectedTicketSinema, selectedTicketData } =
     useContext(GlobalContext);
+  console.log(kreslo);
 
   return (
     <div className="ticketStep">
@@ -48,8 +52,42 @@ function TicketStep({
             </div>
           </>
         )}
-        {stepNum > 2 && contextActive === 2 && "islam"}
-        {stepNum > 3 && contextActive === 3 && "habil"}
+        {stepNum > 2 && contextActive === 2 && (
+          <div className="stepTwoContent">
+            <div className="stepTwoBilets">
+              {ticketPrice &&
+                ticketPrice.map((ticket) => (
+                  <p>
+                    {`
+                    ${ticket.number} adet  ${ticket.name}
+                  `}
+                  </p>
+                ))}
+            </div>
+            <div className="stepTwoBufes">
+              {ticketBufePrice &&
+                ticketBufePrice.map((ticketBufe) => (
+                  <p>
+                    {`
+                    ${ticketBufe.number} adet ${ticketBufe.name}
+                  `}
+                  </p>
+                ))}
+            </div>
+          </div>
+        )}
+        {stepNum > 3 && contextActive === 3 && (
+          <div className="stepThereeBufes">
+            {kreslo &&
+              kreslo.map((kresloRow) => (
+                <p>
+                  {`
+                 ${kresloRow.row} -  ${kresloRow.seatNumber}
+               `}
+                </p>
+              ))}
+          </div>
+        )}
         {stepNum > 4 && contextActive === 4 && "leyla"}
       </div>
     </div>

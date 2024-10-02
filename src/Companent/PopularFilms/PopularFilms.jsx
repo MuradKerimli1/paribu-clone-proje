@@ -6,7 +6,6 @@ import Loading from "../Loading/Loading";
 
 function PopularFilms({ handleToggleSearch }) {
   const { movieData } = useContext(GlobalContext);
-  console.log(movieData);
 
   if (movieData.length === 0) {
     return <Loading />;
@@ -17,7 +16,11 @@ function PopularFilms({ handleToggleSearch }) {
       <p className="popularTitle">Popüler Filmler</p>
       <div className="popularFilms">
         {movieData.slice(0, 10).map((movie) => (
-          <FilmCard key={movie.id} movie={movie} handleToggleSearch={handleToggleSearch} />
+          <FilmCard
+            key={movie.id}
+            movie={movie}
+            handleToggleSearch={handleToggleSearch}
+          />
         ))}
       </div>
     </div>

@@ -1,0 +1,149 @@
+.ticketSwiperCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ececec;
+  padding: 12px;
+  border-radius: 10px;
+  height: 280px;
+  cursor: pointer;
+}
+.ticketSwiperCardLeftImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ticketSwiperCardLeftImg img {
+  width: 120px;
+  aspect-ratio: auto 120 / 120;
+  height: 120px;
+}
+.ticketSwiperCardLeftText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.bufeName {
+  font: 600 16px "Proxima";
+  margin-top: 5px;
+}
+.bufePrice {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.bufePrice span {
+  font: 600 17px "Proxima";
+  text-decoration: line-through;
+  color: #b3b3b3;
+}
+.bufePrice p {
+  font: 600 18px "Proxima";
+  color: #96a825;
+}
+.ticketSwiperCardRight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.ticketSwiperCardRight button {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  font: 600 18px "Proxima";
+}
+.ticketSwiperCardRight span {
+  font: 600 15px "Proxima";
+  color: black;
+}
+.swiperCardReklam {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  z-index: 2;
+  background-color: #96a825;
+  padding: 2px 6px;
+  border-radius: 8px;
+}
+.swiperCardReklam span {
+  color: white;
+  font: 600 10px "Proxima";
+}
+
+@media (max-width: 770px) {
+  .ticketSwiperCard {
+    flex-direction: inherit;
+    justify-content: space-between;
+    padding: 10px;
+    padding: 10px;
+    height: 180px;
+  }
+  .ticketSwiperCardLeft {
+    display: flex;
+    gap: 10px;
+  }
+  .ticketSwiperCardLeftImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ticketSwiperCardLeftImg img {
+  width: 120px;
+    aspect-ratio: auto 120 / 110;
+    height: 110px;
+  }
+  .ticketSwiperCardLeftText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+  }
+  .bufeName {
+    font: 600 14px "Proxima";
+  }
+  .bufePrice {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .bufePrice span {
+    font: 600 15px "Proxima";
+    text-decoration: line-through;
+    color: #b3b3b3;
+  }
+  .bufePrice p {
+    font: 600 16px "Proxima";
+    color: #96a825;
+  }
+  .ticketSwiperCardRight {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 20px;
+  }
+  .ticketSwiperCardRight button {
+    width: 35px;
+    height: 35px;
+    padding: 8px;
+  }
+  .ticketSwiperCardRight span {
+    font: 600 13px "Proxima";
+  }
+  .swiperCardReklam {
+    top: 5%;
+    right: 20%;
+    transform: translateX(-50%);
+  }
+  .swiperCardReklam span {
+    font: 600 8px "Proxima";
+  }
+}

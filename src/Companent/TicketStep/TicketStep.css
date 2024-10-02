@@ -58,5 +58,22 @@
 .step-contextFooter p {
   margin: 10px 0 0 0;
 }
-
-
+.stepTwoContent {
+  max-height: 100px;
+  overflow-y:auto ;
+}
+.stepTwoContent::-webkit-scrollbar{
+  width: 5px;
+  height: 5px;
+  border-radius: 8px;
+}
+.stepTwoContent::-webkit-scrollbar-thumb{
+  background-color: #96A824;
+}
+.stepTwoContent p,
+.stepThereeBufes p{
+  font: 700 12px "Proxima";
+  text-transform: capitalize;
+  margin-top: 4px;
+  color: white;
+}

@@ -1,10 +1,17 @@
 import React from "react";
-import './PayingTicket.css'
+import "./PayingTicket.css";
+import PayingBasket from "../PayingBasket/PayingBasket";
+import PayingForm from "../PayingForm/PayingForm";
 
 function PayingTicket() {
   return (
     <div className="payingTicket">
-      <h2> BUying Ticket</h2>
+      <div className="payingFormContainer">
+        <PayingForm />
+      </div>
+      <div className="payingBasketContainer">
+        <PayingBasket />
+      </div>
     </div>
   );
 }

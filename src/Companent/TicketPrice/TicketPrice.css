@@ -1,0 +1,29 @@
+.TicketPrice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.TicketPrice span {
+  color: white;
+  font: 600 20px "Proxima";
+}
+.TicketPrice p {
+  color: white;
+  font: 600 22px "Proxima";
+}
+@media (max-width: 770px) {
+    .TicketPrice {
+       flex-direction: column;
+       align-items: start;
+       padding: 12px 0;
+      }
+      .TicketPrice span {
+        color: white;
+        font: 600 15px "Proxima";
+      }
+      .TicketPrice p {
+        color: white;
+        font: 600 17px "Proxima";
+      }
+}

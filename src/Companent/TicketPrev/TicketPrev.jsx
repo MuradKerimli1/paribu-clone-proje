@@ -2,8 +2,6 @@ import React from "react";
 import "./TicketPrev.css";
 
 function TicketPrev({ handlePrev, isDisable }) {
-  console.log(isDisable);
-
   return (
     <div className="ticketPrev">
       <p>
