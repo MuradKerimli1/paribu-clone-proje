@@ -97,8 +97,6 @@ function TicketBasket({
     }
   }
 
-  console.log(bufeArray, ticketBufePrice);
-
   return (
     <div className="ticketBasket">
       <TicketPrice finalTotalPrice={finalTotalPrice} />
@@ -109,7 +107,7 @@ function TicketBasket({
         handleTicketMinus={handleTicketMinus}
       />
       <TicketSwiper
-      ticketBufePrice={ticketBufePrice}
+        ticketBufePrice={ticketBufePrice}
         handleBufeMinus={handleBufeMinus}
         handleBufePlus={handleBufePlus}
       />

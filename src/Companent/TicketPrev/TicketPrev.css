@@ -4,7 +4,7 @@
   width: 100%;
   justify-content: space-between;
 }
-.ticketPrev p {
+.ticketPrevParagrapg {
   font-size: 13px;
   color: #fff;
   font-weight: 500;
@@ -32,10 +32,16 @@
 .biletSoruces {
   display: none;
 }
+.toplamDiv img{
+  transition: all .4s;
+}
+.arrowActive{
+  rotate: 180deg;
+}
 @media (max-width: 770px) {
   .prevBtns {
     bottom: 0;
-    z-index: 50;
+    z-index: 100;
     position: fixed;
     background-color: #404040;
     display: flex;
@@ -43,7 +49,7 @@
     left: 0;
     width: 100%;
   }
-  .ticketPrev p {
+  .ticketPrevParagrapg {
     display: none;
   }
   .toplamDiv {

@@ -1,1 +1,93 @@
+.biletSources {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.biletSourcesChild {
+  border-bottom: 1px solid gray;
+  padding: 15px 0;
+}
+.biletFilmSorucsHead {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
 
+.biletFilmSorucsHeadLeft,
+.biletFilmSorucsFootBottom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.biletFilmSorucsContextTop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.biletFilmSorucsFoot,
+.kresloSourcesItems {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.biletFilmSorucsHeadLeftText p,
+.biletFilmSorucsContextTop p,
+.biletFilmSorucsFoot p,
+.ticketBos {
+  font: 600 13px "Proxima";
+  color: black;
+}
+.biletFilmSorucsHeadLeftText span {
+  font: 600 12px "Proxima";
+  opacity: 0.8;
+  color: black;
+}
+.ticketSourcesItems,
+.bufeSourcesItems {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ticketSourcesItems p,
+.bufeSourcesItems p,
+.kresloSourcesItems p {
+  font: 600 13px "Proxima";
+  color: black;
+}
+.ticketSourcesItems span,
+.bufeSourcesItems span {
+  font: 600 12px "Proxima";
+  color: black;
+  opacity: 0.8;
+}
+.ticketSourcesItems p,
+.bufeSourcesItems p {
+  width: 28%;
+}
+.biletSourcesClose img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+}
+
+.biletFilmSorucsHeadRight img {
+  width: 45px;
+  height: auto;
+  object-fit: cover;
+}
+
+.playIcon {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+}

@@ -17,7 +17,7 @@ function PayingTicket({ finalTotalPrice, ticketPrice }) {
         icon: "success",
         title: "Ödeme Başarılı!",
         text: "Ödemeniz başarıyla gerçekleştirildi!",
-        confirmButtonText: "Ana Seyfeye get",
+        confirmButtonText: "Ana Seyfeye git",
       }).then(() => {
         navigate("/");
       });

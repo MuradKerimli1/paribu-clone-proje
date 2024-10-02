@@ -11,7 +11,7 @@ function TicketSteps({
   ticketPrice,
   ticketBufePrice,
   kreslo,
-  finalTotalPrice
+  finalTotalPrice,
 }) {
   const { selectedTicketFilm, selectedTicketSinema, selectedTicketData } =
     useContext(GlobalContext);
@@ -83,6 +83,9 @@ function TicketSteps({
           }
           handlePrev={handlePrev}
           finalTotalPrice={finalTotalPrice}
+          ticketPrice={ticketPrice}
+          ticketBufePrice={ticketBufePrice}
+          kreslo={kreslo}
         />
       </div>
     </div>

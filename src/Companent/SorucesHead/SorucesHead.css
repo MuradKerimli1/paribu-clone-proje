@@ -1,0 +1,14 @@
+.sorucesHeadMain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.sorucesHeadMain p {
+  font: 600 14px "Proxima";
+  color: black;
+}
+.sorucesHeadMain span {
+  font: 600 14px "Proxima";
+  color: #96a824;
+}

@@ -20,4 +20,12 @@
 .leftTicketSelect.return {
   flex-direction: row-reverse;
 }
+@media(max-width:770px){
+  .ticketSelect {
+    flex-direction: column;
+  }
+  .leftTicketSelect {
+    flex-direction: column;
+  }
+}
 
