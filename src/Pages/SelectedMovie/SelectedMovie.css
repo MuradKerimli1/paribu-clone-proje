@@ -146,7 +146,6 @@
 .bilet {
   background-color: #98a726;
   color: white;
-
   padding: 12px 26px;
   border-radius: 25px;
   border-color: transparent;
@@ -154,12 +153,24 @@
   white-space: nowrap;
   cursor: pointer;
 }
-.fragman,
 .yorumla {
   display: flex;
   align-items: center;
   gap: 7px;
   padding: 12px 26px;
+  border-radius: 25px;
+  font: 600 13px "Proxima";
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.fragman{
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 26px;
   border-radius: 25px;
   font: 600 13px "Proxima";
   background-color: transparent;
